@@ -150,21 +150,24 @@
   position: relative; left: -50%; 
   background-color: #fff;
   border-radius: 5rem;
-  border-width: 6px;
+  border-width: 3px;
   border-style: solid;
   border-color: #444;
-  padding: 3px 6px 5px 2px;
+  padding: 2px 4px 3px 2px;
+  /*padding: 3px;*/
   /*white-space: wrap;*/
   max-width:100px;
-  height: 14px;
-  width:14px;
-  box-shadow: 6px 6px 6px 0px rgba(0, 0, 0,.5);
+  height: 12px;
+  width:12px;
+  box-shadow: 6px 10px 6px 0px rgba(0, 0, 0,.5);
   background-clip: border-box;
-  line-height: 15px;
+  line-height: 10px;
   text-align:center;
-  font-size: 18px;
+  vertical-align:center;
+  font-size: 10px;
   font-smooth: always;
-  font-weight:bold;
+  font-weight:bolder;
+  font-variant-caps: all-small-caps;
   }
 
 /*pointe de flèche*/
@@ -173,29 +176,29 @@
   width: 0px; height: 0px; left: 50%;
   border-style: solid;
   border-color: #444 transparent transparent transparent;
-  border-width: 20px 8px 0 8px; /*[first number is height, second/fourth are rigth/left width]*/
-  margin-left: -8px;
-  margin-top:-4px;
+  border-width: 15px 6px 0 6px; /*[first number is height, second/fourth are rigth/left width]*/
+  margin-left: -6px;
+  margin-top:-2px;
   z-index:100;
  
 }
 
 /*class en fonction de typecss*/
 .lieu-echange > .map-label-content {
-  border-color: #e00;
-  color: #e00;
+  border-color: #b30000;
+  color: #b30000;
 }
 .lieu-echange > .map-label-arrow {
-  border-top-color: #e00;
-  color: #e00;
+  border-top-color: #b30000;
+  /*color: #b30000;*/
   }
 .atelier-part > .map-label-content {
-  border-color: #003cb3;
-  color: #003cb3;
+  border-color: #999900;
+  color: #999900;
 }
 .atelier-part > .map-label-arrow {
-  border-top-color: #003cb3;
-  color: #003cb3;
+  border-top-color: #999900;
+  /*color: #999900;*/
 }
 .prototype-archi > .map-label-content {
   border-color: #ff9900;
@@ -203,7 +206,7 @@
 }
 .prototype-archi > .map-label-arrow {
   border-top-color: #ff9900;
-  color:#ff9900;
+  /*color:#ff9900;*/
 }
 .patrimoine> .map-label-content{
 	border-color: #873600;
@@ -211,7 +214,7 @@
 }
 .patrimoine> .map-label-arrow{
 	border-top-color: #873600;
-  color:#873600;
+  /*color:#873600;*/
 }
 
 .mycluster{
@@ -441,11 +444,11 @@ var coucheTerritoires = L.geoJson (territoires,{//la fonction L.geoJson crée un
 			
 		});
 	
-	coucheTerritoires.addTo(map);
+	//coucheTerritoires.addTo(map);
 	
 
 //Affichage du control Info en fonction des couches sélectionnées
-map.addControl(info);
+//map.addControl(info);
 function displayInfo(){if(map.hasLayer(coucheTerritoires)){info.addTo(this);} else {info.remove(this);}}
 map.on('overlayadd',displayInfo);
 map.on('overlayremove', displayInfo);
@@ -582,7 +585,7 @@ var initLayerTemp;
 function displayLayersInit (){
 //Création des marquers agglomérats d'icones: iconclusters
 var iconclustersInit = L.markerClusterGroup({
-	maxClusterRadius: 50,
+	maxClusterRadius: 30,
 	singleMarkerMode: false,
 	zoomToBoundsOnClick: true,
 	spiderfyOnMaxZoom:true,
@@ -604,7 +607,7 @@ var initLayerTemp = L.geoJson(initiativesChecked,{
 		// Création de l'icone initiatives
 		var iconInitiative = L.divIcon({
 		iconSize:null,
-		html:'<div class="map-label '+feature.properties.typecss+'"><div class="map-label-content">[M]</div><div class="map-label-arrow"></div></div>'
+		html:'<div class="map-label '+feature.properties.typecss+'"><div class="map-label-content" style="color:black;">[M]</div><div class="map-label-arrow"></div></div>'
 		});
 		//Création du marker
 		var marker = L.marker(latlng,{icon:iconInitiative,pane:"635"});
@@ -661,7 +664,7 @@ updateInitiativesChecked();
 
 map.eachLayer(function (layer) {map.removeLayer(layer)});
 displayLayersInit ();
-coucheTerritoires.addTo(map);
+//coucheTerritoires.addTo(map);
 	
 
 //Affichage du control Info en fonction des couches sélectionnées
@@ -689,7 +692,7 @@ var fond = {
 			"Grisaille" : bwLayer
 };
 
-var overlays ={"Territoires":coucheTerritoires,};
+var overlays ={"Périmètres administratifs":coucheTerritoires,};
 
 //var overlays = {"Innovations": iconclustersInit};
 
