@@ -190,12 +190,12 @@
   color: #e00;
   }
 .atelier-part > .map-label-content {
-  border-color: #3333ff;
-  color: #3333ff;
+  border-color: #003cb3;
+  color: #003cb3;
 }
 .atelier-part > .map-label-arrow {
-  border-top-color: #3333ff;
-  color: #3333ff;
+  border-top-color: #003cb3;
+  color: #003cb3;
 }
 .prototype-archi > .map-label-content {
   border-color: #ff9900;
@@ -286,7 +286,7 @@ var osmfr = L.tileLayer('http://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png'
 	bounds: [[40,-6],[55,9]],
 	 });
 // Ajouter la couche "osmfr" à la carte		
-	map.addLayer(osmfr);
+	
 	
 // création d'une couche "bwLayer" un fond de carte en grisaille
         var bwLayer = L.tileLayer('https://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png', {
@@ -294,7 +294,7 @@ var osmfr = L.tileLayer('http://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png'
 			opacity:0.8,
             maxZoom: 19,
         });
-
+map.addLayer(bwLayer);
 	
 //échelle
 L.control.scale({imperial:false,maxWidth: 200,updateWhenIdle:false}).addTo(map);
@@ -533,7 +533,7 @@ var checkboxStates = {Type:typAct3,};
 	}
 	
 	div.innerHTML = '<h4>Type de partenaires</h4><input id="all" type="checkbox" onclick="toggle(this);" checked/><b>Tout sélectionner</b><br>'+actorscheckBox
-	+'<br><h4>Type d\'innovations</h4><div style="display:flex;"><div class="map-label" style="position:relative;"><div class="map-label-content">👁 </div><div class="map-label-arrow" ></div></div></div><div style="overflow:hidden;">'+legendeInit+'</div>';
+	+'<br><h4>Type d\'innovations</h4><div style="display:flex;"><div class="map-label" style="position:relative;"><div class="map-label-content">[M] </div><div class="map-label-arrow" ></div></div></div><div style="overflow:hidden;">'+legendeInit+'</div>';
 	
 
 	
@@ -604,7 +604,7 @@ var initLayerTemp = L.geoJson(initiativesChecked,{
 		// Création de l'icone initiatives
 		var iconInitiative = L.divIcon({
 		iconSize:null,
-		html:'<div class="map-label '+feature.properties.typecss+'"><div class="map-label-content">👁 </div><div class="map-label-arrow"></div></div>'
+		html:'<div class="map-label '+feature.properties.typecss+'"><div class="map-label-content">[M]</div><div class="map-label-arrow"></div></div>'
 		});
 		//Création du marker
 		var marker = L.marker(latlng,{icon:iconInitiative,pane:"635"});
@@ -670,7 +670,7 @@ function displayInfo(){if(map.hasLayer(coucheTerritoires)){info.addTo(this);} el
 map.on('overlayadd',displayInfo);
 map.on('overlayremove', displayInfo);
 
-map.addLayer(osmfr);
+map.addLayer(bwLayer);
 
 
 
