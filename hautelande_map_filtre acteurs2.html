@@ -198,14 +198,17 @@
   color: #3333ff;
 }
 .prototype-archi > .map-label-content {
-  border-color: #873600;
-  color:#873600;
+  border-color: #ff9900;
+  color:#ff9900;
 }
 .prototype-archi > .map-label-arrow {
-  border-top-color: #873600;
+  border-top-color: #ff9900;
+  color:#ff9900;
+}
+.patrimoine> .map-label-content,.patrimoine> .map-label-arrow{
+	border-top-color: #873600;
   color:#873600;
 }
-
 
 .mycluster{
   background-clip: padding-box;
@@ -462,7 +465,11 @@ var initiatives = {
 	{"type": "Feature","properties": {"name":"Logement modulable temporaire","cat":"prototype de construction","typecss":"prototype-archi","actors":["Association(s)","Entreprise(s) locale(s)","ENSAP-Bx"],"illustre":"","link":"#"},
       "geometry": {"type": "Point",
         "coordinates": [-0.5218505859375,44.26241249401097]}
-	},  
+	},
+	{"type": "Feature","properties": {"name":"Airial Landais","cat":"Patrimoine/ressource","typecss":"patrimoine","actors":["Association(s)","PNR","ENSAP-Bx"],"illustre":"","link":"#"},
+      "geometry": {"type": "Point",
+        "coordinates": [-0.7911255955696106,44.49172404467003]}
+	},	
   ]
 }
 
@@ -513,8 +520,8 @@ var checkboxStates = {Type:typAct3,};
 	for (var i = 0; i < typAct3.length; i++) {
         actorscheckBox += '<input class="input" id="' + typAct3[i] + '" type="checkbox" value="' + typAct3[i] + '" checked/>' + typAct3[i]+ '<br>';
     }
-	var gradesInit = ["atelier-part","lieu-echange","prototype-archi"],
-		labelsInit = ["Ateliers participatifs","Plateforme échanges&innovations","Prototype architectural"];
+	var gradesInit = ["atelier-part","lieu-echange","prototype-archi","patrimoine"],
+		labelsInit = ["Ateliers participatifs","Plateforme échanges&innovations","Prototype architectural","Patrimoine"];
 		
 	var legendeInit ='';
 	for (var i=0;i<gradesInit.length;i++){
