@@ -340,10 +340,10 @@ function getTerritoireColor(d){
 
 function getTerritoireWeight (d){
 	switch (d){
-		case "Commune": return 2;
-		case "EPCI": return 2;
-		case "PNR": return 2;
-		case "LEADER": return 2;
+		case "Commune": return 1;
+		case "EPCI": return 1;
+		case "PNR": return 1;
+		case "LEADER": return 1;
 		default: return 6;
 		
 	}
@@ -380,7 +380,7 @@ var stripes = new L.StripePattern({height:2,weight:1,spaceWeight:1,color:getTerr
         stripes.addTo(map);
     layer.setStyle({
         //pane: '630',
-		weight: 1,
+		weight: 2,
         fillPattern: stripes,
         dashArray: '',
         fillOpacity: 0.7,
