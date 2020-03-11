@@ -670,7 +670,7 @@ map.eachLayer(function (layer) {map.removeLayer(layer)});
 displayLayersInit ();
 //coucheTerritoires.addTo(map);
 	
-
+stripes.addTo(map);
 //Affichage du control Info en fonction des couches sélectionnées
 
 function displayInfo(){if(map.hasLayer(coucheTerritoires)){info.addTo(this);} else {info.remove(this);}};
