@@ -1,11 +1,11 @@
 # Entreposage des cartes interactives pour le programme de recherche MARGINOV et gestion de version
 
-Cartes accessible sur : https://thomacarto.github.io/Marginov/ [nom du fichier]
+Cartes accessibles sur : https://thomacarto.github.io/Marginov/ [nom du fichier]
 
 ## Programme Marginov
 
 
-MARGINOV – Créativités et innovations socio-spatiales dans les territoires de marge (région Nouvelle-Aquitaine). États des lieux, expérimentations et propositions
+**MARGINOV – Créativités et innovations socio-spatiales dans les territoires de marge (région Nouvelle-Aquitaine). États des lieux, expérimentations et propositions**
 
 CNRS Passages (UMR 5319) financé par la région Nouvelle-Aquitaine et coordonnée par B. Davasse.
 
@@ -16,7 +16,7 @@ L’objectif général du projet MARGINOV est d’interroger les différentes ma
 
 Carte présentant les expérimentations menées dans la Haute-Lande par les chercheurs de Marginov et leurs partenaires. Cette carte permet de filtrer les expérimentations affichées en fonction des acteurs qui y participent. Chaque expérimentation est symbolisé par une épingle sur la carte. Lorsque l'on clique sur l'épingle un pop-up s'affiche et donne accès à plus d'informations (une page web spécifique).
 
-** Lien vers la carte : ** https://thomacarto.github.io/Marginov/hautelande_map_filtre%20acteurs2.html
+**Lien vers la carte :** https://thomacarto.github.io/Marginov/hautelande_map_filtre%20acteurs2.html
 
 
 
