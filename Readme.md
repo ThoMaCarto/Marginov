@@ -2,6 +2,8 @@
 
 Cartes accessibles sur : https://thomacarto.github.io/Marginov/ [nom du fichier]
 
+Cartographie interactive : ©[Thomas Maillard](https://cv.archives-ouvertes.fr/thomas-maillard "CV_T-Maillard") 
+
 ## Programme Marginov
 
 
