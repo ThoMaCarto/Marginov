@@ -1,4 +1,4 @@
-# Entreposage des cartes interactives pour le programme de recherche MARGINOV et gestion de version
+# Entreposage des cartes interactives pour le programme de recherche MARGINOV et gestion de versions
 
 Cartes accessibles sur : https://thomacarto.github.io/Marginov/ [nom du fichier]
 
