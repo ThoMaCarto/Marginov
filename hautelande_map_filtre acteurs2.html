@@ -581,7 +581,7 @@ var checkboxStates = {
 	Type: typAct3,
 };
 
-/*Création du panneau de commande des types d'acteurs*/
+/*Création du panneau de commande des types d'acteurs et de la légende des couleurs d'initiatives*/
 
 var div = document.getElementById('actors');
 var actorscheckBox = '';
@@ -596,7 +596,14 @@ for (var i = 0; i < gradesInit.length; i++)
 {
 	legendeInit += '<div class="map-label ' + gradesInit[i] + '" style="position:relative;"><div class="map-label-content" style="font-size:14px;position:relative;border:0;background-color:rgba(0,0,0,0);box-shadow: 0px 0px 0px 0px rgba(0, 0, 0,0);">' + labelsInit[i] + '</div></div><br>'
 }
-div.innerHTML = '<h4>Type de partenaires</h4><input id="all" class="input" type="checkbox" onclick="toggle(this);updateInitiativeLayer()" checked/><b>Tout sélectionner</b><br>' + actorscheckBox + '<br><h4>Type d\'innovations</h4><div style="display:flex;"><div class="map-label" style="position:relative;"><div class="map-label-content">[M] </div><div class="map-label-arrow" ></div></div></div><div style="overflow:hidden;">' + legendeInit + '</div>';
+div.innerHTML = '<h4>Type de partenaires</h4><input id="all" class="input" type="checkbox" onclick="toggle(this);updateInitiativeLayer()" checked/><b>Tout sélectionner</b><br>' 
++ actorscheckBox + '<br>'
++'<h4>Type d\'innovations</h4>'
++'<div style="display:flex;flex-direction:row;">'
++'<div style="display:flex;max-width:20px;"><div class="map-label" style="position:relative;"><div class="map-label-content">[M]</div><div class="map-label-arrow" ></div></div></div>'
++'<div style="margin:auto;"><b>Experience Marginov</b></div>'
++'</div>'
++'<div style="overflow:hidden;">'+ legendeInit + '</div>';
 // fonction de mise à jours de la liste des filtre
 function updateCheckboxStates()
 {
