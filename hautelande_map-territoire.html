@@ -42,23 +42,12 @@
 	}
 	
    .map{
-	width: 70%;
+	width: 100%;
 	height: 500px;
 	z-index: 0;
 	}
    
-   	
-	.filtercats{
-	display:flex;
-	flex-wrap:wrap;
-	justify-content: space-between;
-	}
-	
-			
-	.checkboxes{
-	margin-left:50%;
-	}
-	
+  
 	.info {
     padding: 6px 8px;
     font: 14px/16px Arial, Helvetica, sans-serif;*/ 
@@ -69,153 +58,15 @@
 	max-width:230px;
 	}
 	
-	
-	
-	#actors{
-	padding: 6px 8px;
-    font: 14px/16px Arial, Helvetica, sans-serif;*/ 
-	text-align: right;
-	background: rgba(255,255,255,0.8);
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    border-radius: 5px;
-	max-width:25%;
-	}
-	
-	.info h4,#actors h4 {
+
+	.info h4 {
     margin: 0 0 5px;
     color: #777;
 	}
 	
-	.legend {
-    line-height: 18px;
-    color: #555;
-	}
-	
-	.legend i {
-    width: 18px;
-    height: 18px;
-    float: left;
-    margin-right: 8px;
-    opacity: 0.7;
-	}
 
 
-	/*icones des initiatives*/
-	.map-label {
-	position: absolute;
-	bottom: 0;left:50%;
-	display: flex;
-	flex-direction: column;
-	text-align: center;
-	
-	}
 
-	.legend-label-cont{
-	display:flex;
-	flex-direction:row;
-	flex-wrap: wrap;
-	position: relative;
-	bottom: 0;right: -23%;
-	justify-content:space-between;
-	padding:0%;
-	max-width:230px;
-	
-	}
-
-	.legend-label{
-	margin:1%;
-	display: flex;
-	flex-direction: column;
-	text-align: center;
-	}
-
-
-.map-label-content {
-  order: 1;
-  position: relative; left: -50%; 
-  background-color: #fff;
-  border-radius: 5rem;
-  border-width: 3px;
-  border-style: solid;
-  border-color: #444;
-  padding: 2px 4px 3px 2px;
-  /*padding: 3px;*/
-  /*white-space: wrap;*/
-  max-width:100px;
-  height: 12px;
-  width:12px;
-  box-shadow: 6px 10px 6px 0px rgba(0, 0, 0,.5);
-  background-clip: border-box;
-  line-height: 10px;
-  text-align:center;
-  vertical-align:center;
-  font-size: 10px;
-  font-smooth: always;
-  font-weight:bolder;
-  font-variant-caps: all-small-caps;
-  }
-
-/*pointe de flèche*/
-.map-label-arrow {
-  order: 2;
-  width: 0px; height: 0px; left: 50%;
-  border-style: solid;
-  border-color: #444 transparent transparent transparent;
-  border-width: 15px 6px 0 6px;
-  margin-left: -6px;
-  margin-top:-2px;
-  z-index:100;
-  
- 
-}
-
-/*class en fonction de typecss*/
-.lieu-echange > .map-label-content {
-  border-color: #b30000;
-  color: #b30000;
-}
-.lieu-echange > .map-label-arrow {
-  border-top-color: #b30000;
-  /*color: #b30000;*/
-  }
-.atelier-part > .map-label-content {
-  border-color: #999900;
-  color: #999900;
-}
-.atelier-part > .map-label-arrow {
-  border-top-color: #999900;
-  /*color: #999900;*/
-}
-.prototype-archi > .map-label-content {
-  border-color: #ff9900;
-  color:#ff9900;
-}
-.prototype-archi > .map-label-arrow {
-  border-top-color: #ff9900;
-  /*color:#ff9900;*/
-}
-.patrimoine> .map-label-content{
-	border-color: #873600;
-  color:#873600;
-}
-.patrimoine> .map-label-arrow{
-	border-top-color: #873600;
-  /*color:#873600;*/
-}
-
-.mycluster{
-  background-clip: padding-box;
-  background-color: rgba(65,105,225, .9);
-  border: 3px solid rgba(65,105,225, .6);
- text-align: center;
-  font: 12px "Helvetica Neue", Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  border-radius: 5rem;
-  line-height:30px;
-  box-shadow: 6px 6px 6px 0px rgba(0, 0, 0,.5);
-}
-  
- 
 	
    </style>
 </head>
@@ -225,8 +76,7 @@
 
 <section class="content">
 	<div id="map" class="map"></div>
-	<div  id="actors"></div>
-	<div  id="initiatives" class="filtercats"></div>
+	
 	
 </section>
 
@@ -490,6 +340,9 @@ var coucheTerritoires = L.geoJson(territoires,
 	onEachFeature: onEachTerritoires,
 });
 
+coucheTerritoires.addTo(map);
+info.addTo(map)
+
 
 /*Affichage du control Info en fonction des couches sélectionnées
 le control ne s'affiche que si la couche est affichée*/
@@ -510,242 +363,6 @@ map.on('overlayremove', displayInfo);
 
 
 
-/*3.Création et affichage de la couche des innovations étudiées par Marginov*/
-// 3.1 Base de donnée des initiatives/innovations étudiées par MARGINOV en format geojson
-var initiatives = {
-  "type": "FeatureCollection",
-  "features": [
-    {"type": "Feature",
-	"properties": {"name": "Scierie de Moustey","cat": "Plateforme échanges & innovations","typecss":"lieu-echange","actors": ["PNR","Commune","Communauté de Communes","ENSAP-Bx","LEADER"],"illustre":"http://www.marginov.cnrs.fr/wp-content/uploads/2020/02/DSCF6024.jpg","link":"http://www.marginov.cnrs.fr/?page_id=950"},
-      "geometry": {"type": "Point","coordinates": [-0.7643330097198486,44.356221776011104]}
-    },
-    {"type": "Feature",
-      "properties": {"name":"ABrocasDabra","cat":"Atelier Participatif","typecss":"atelier-part","actors":["Commune","ENSAP-Bx","Habitants"],"illustre":"http://www.marginov.cnrs.fr/wp-content/uploads/2020/02/DSCF5972.jpg","link":"#"},
-      "geometry": {"type": "Point","coordinates": [-0.5369165539741516,44.0439687710076]}
-    },
-	{"type": "Feature","properties": {"name":"Logement modulable temporaire","cat":"prototype de construction","typecss":"prototype-archi","actors":["Association(s)","Entreprise(s) locale(s)","ENSAP-Bx"],"illustre":"","link":"#"},
-      "geometry": {"type": "Point",
-        "coordinates": [-0.5218505859375,44.26241249401097]}
-	},
-	{"type": "Feature","properties": {"name":"Airial Landais","cat":"Patrimoine/ressource","typecss":"patrimoine","actors":["Association(s)","PNR","ENSAP-Bx"],"illustre":"","link":"#"},
-      "geometry": {"type": "Point",
-        "coordinates": [-0.7911255955696106,44.49172404467003]}
-	},	
-  ]
-}
-
-/*3.1 afficher les innovations en fonction du type d'acteur coché*/
-
-//créer un tableau contenant tous les types d'acteurs recensé typAct3
-var typAct2 = [];
-for (var i = 0; i < initiatives.features.length; i++)
-{
-	for (var e = 0; e < initiatives.features[i].properties.actors.length; e++)
-	{
-		var actorUnique = getCat(typAct2, initiatives.features[i].properties.actors[e]);
-		if (actorUnique === undefined)
-		{
-			actorUnique = [initiatives.features[i].properties.actors[e]]
-		}
-		typAct2.push(actorUnique);
-	}
-}
-var typAct3 = removeDuplicates(typAct2);
-
-function removeDuplicates(d)
-{
-	let unique = {};
-	d.forEach(function(i)
-	{
-		if (!unique[i])
-		{
-			unique[i] = true;
-		}
-	});
-	return Object.keys(unique);
-}
-
-function getCat(cats, cat)
-{
-	for (var u = 0; u < cats.length; u++)
-	{
-		if (cats[u]["label"] === cat)
-		{
-			return cats[u];
-		}
-	}
-	return;
-}
-///Création de la liste remplie à l'ouverture de la page
-var checkboxStates = {
-	Type: typAct3,
-};
-
-/*Création du panneau de commande des types d'acteurs et de la légende des couleurs d'initiatives*/
-
-var div = document.getElementById('actors');
-var actorscheckBox = '';
-for (var i = 0; i < typAct3.length; i++)
-{
-	actorscheckBox += '<input class="input" id="' + typAct3[i] + '" type="checkbox" value="' + typAct3[i] + '" onclick="updateInitiativeLayer()" checked/>' + typAct3[i] + '<br>';
-}
-var gradesInit = ["atelier-part", "lieu-echange", "prototype-archi", "patrimoine"],
-	labelsInit = ["Ateliers participatifs", "Plateforme échanges&innovations", "Prototype architectural", "Patrimoine"];
-var legendeInit = '';
-for (var i = 0; i < gradesInit.length; i++)
-{
-	legendeInit += '<div class="map-label ' + gradesInit[i] + '" style="position:relative;"><div class="map-label-content" style="font-size:14px;position:relative;border:0;background-color:rgba(0,0,0,0);box-shadow: 0px 0px 0px 0px rgba(0, 0, 0,0);">' + labelsInit[i] + '</div></div><br>'
-}
-div.innerHTML = '<h4>Type de partenaires</h4><input id="all" class="input" type="checkbox" onclick="toggle(this);updateInitiativeLayer()" checked/><b>Tout sélectionner</b><br>' 
-+ actorscheckBox + '<br>'
-+'<h4>Type d\'innovations</h4>'
-+'<div style="display:flex;flex-direction:row;">'
-+'<div style="display:flex;max-width:20px;"><div class="map-label" style="position:relative;"><div class="map-label-content">[M]</div><div class="map-label-arrow" ></div></div></div>'
-+'<div style="margin : auto auto auto 6px;"><b>Experience Marginov</b></div>'
-+'</div>'
-+'<div style="overflow:hidden;">'+ legendeInit + '</div>';
-// fonction de mise à jours de la liste des filtre
-function updateCheckboxStates()
-{
-	checkboxStates.Type.splice(0, checkboxStates.Type.length);
-	//map.removeLayer(init2);	
-	var checkboxes = document.querySelectorAll('#actors>.input');
-	for (var i = 0; i < checkboxes.length; i++)
-	{
-		var check = [checkboxes[i].value];
-		if (checkboxes[i].checked)
-		{
-			checkboxStates.Type.push(checkboxes[i].value)
-		};
-	};
-};
-//mise à jour de la liste à chaque click dans la liste à cocher
-
-// gestion de la checkbox "all": tout sélectionner ou déselectionner en fonction du statut checked ou non
-function toggle(source)
-{
-	var checkboxes = document.querySelectorAll('input[type="checkbox"]');
-	for (var i = 0; i < checkboxes.length; i++)
-	{
-		if (checkboxes[i] != source) checkboxes[i].checked = source.checked;
-	}
-}
-
-////création d'un géojson temporaire contenant seulement les objets correspondant aux acteurs sélectionnés dans les checkboxes
-var initiativesChecked = {
-	"type": "FeatureCollection",
-	"features": []
-};
-updateInitiativesChecked();
-var iconclustersInit;
-var initLayerTemp;
-
-/*Fonction affichant la couche sous la forme d'agglomérat de point (clusters)*/
-function displayLayersInit()
-{
-	//Création des marquers agglomérats d'icones: iconclustersInit
-	var iconclustersInit = L.markerClusterGroup(
-	{
-		maxClusterRadius: 30,
-		singleMarkerMode: false,
-		zoomToBoundsOnClick: true,
-		spiderfyOnMaxZoom: true,
-		clusterPane: '630',
-		iconCreateFunction: function(cluster)
-		{
-			var markers = cluster.getAllChildMarkers();
-			var n = markers.length;
-			var e = n * 10;
-			return L.divIcon(
-			{
-				html: n,
-				className: 'mycluster',
-				iconSize: L.point(30, 30)
-			});
-		},
-	});
-	////Couche d'intitatives en fonction des acteurs cochés
-	var initLayerTemp = L.geoJson(initiativesChecked,
-	{
-		//filter:  function checkfilter(feature){const isTypeChecked = checkboxStates.Type.includes(feature.properties.actors);return isTypeChecked;},
-		pointToLayer: function(feature, latlng)
-		{
-			// Création de l'icone initiatives
-			var iconInitiative = L.divIcon(
-			{
-				iconSize: null,
-				html: '<div class="map-label ' + feature.properties.typecss + '"><div class="map-label-content" style="color:black;">[M]</div><div class="map-label-arrow"></div></div>'
-			});
-			//Création du marker
-			var marker = L.marker(latlng,
-			{
-				icon: iconInitiative,
-				pane: "635"
-			});
-			//caractéristiques des popup
-			marker.bindPopup('<h4>' + feature.properties.name + '</h4><img src="' + feature.properties.illustre + '" width="90%"><p><b> Type d\'innovation : </b>' + feature.properties.cat + '</p><p><b>Acteurs :</b>' + feature.properties.actors + '</p><p><a href="' + feature.properties.link + '" target="_parent" >+ d\'info...</a></p>');
-			//Affichage des marqueurs
-			return marker;
-		},
-	});
-	//intégration des marqueurs aux clusters
-	iconclustersInit.addLayer(initLayerTemp);
-	//intégration des clusters à la carte
-	iconclustersInit.addTo(map);
-};
-
-//mise à jour du geoJSON temporaire 
-function updateInitiativesChecked()
-{
-	initiativesChecked.features.splice(0, initiativesChecked.features.length);
-	updateCheckboxStates();
-	for (var i = 0; i < initiatives.features.length; i++)
-	{
-		if (initiatives.features[i].properties.actors.some(x => checkboxStates.Type.some(y => y === x)) === true)
-		{
-			initiativesChecked.features.push(initiatives.features[i]);
-		}
-	};
-	return initiativesChecked;
-};
-// affichage de la couche des initiatives au chargement de la page
-displayLayersInit();
-
-
-/*4. Mise à jour de la carte à chaque fois que l'on coche ou décoche un acteur*/
-
-//création d'une couche affichant le geojson temporaire
-function updateInitiativeLayer()
-{
-	var initiativesChecked = {
-		"type": "FeatureCollection",
-		"features": []
-	};
-	updateInitiativesChecked();
-	map.eachLayer(function(layer)
-	{
-		map.removeLayer(layer)
-	});
-	displayLayersInit();
-	//Affichage du control Info en fonction des couches sélectionnées
-	function displayInfo()
-	{
-		if (map.hasLayer(coucheTerritoires))
-		{
-			info.addTo(this);
-		}
-		else
-		{
-			info.remove(this);
-		}
-	};
-	map.on('overlayadd', displayInfo);
-	map.on('overlayremove', displayInfo);
-	map.addLayer(bwLayer);
-};
-
-
-
 /*5. création du controleur de couches*/
 /////Controleur des couches
 var fond = {
@@ -756,7 +373,7 @@ var overlays = {
 	"Périmètres administratifs": coucheTerritoires,
 };
 //var overlays = {"Innovations": iconclustersInit};
-var controlLayers = L.control.layers(fond, overlays,
+var controlLayers = L.control.layers(fond, null,
 {
 	collapsed: false,
 	position: 'bottomleft',
