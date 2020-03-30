@@ -39,18 +39,19 @@
 	justify-content: space-around;
 	align-items: flex-start;
 	flex-wrap: wrap;
+	font: 14px/16px Arial, Helvetica, sans-serif;
 	}
 	
    .map{
 	width: 100%;
-	height: 300px;
+	height: 400px;
 	z-index: 0;
 	}
    
   
 	.info {
     padding: 6px 8px;
-    font: 14px/16px Arial, Helvetica, sans-serif;*/ 
+    font: 14px/16px Arial, Helvetica, sans-serif; 
 	text-align: right;
 	background: rgba(255,255,255,0.8);
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -126,21 +127,7 @@ map.getPane('635').style.zIndex = 635;
 var attribMARGINOV = '<b>Données</b> © <a href="http://www.marginov.cnrs.fr/?page_id=214">MARGINOV</a>'
 
 //fond de carte
-// création d'une couche "osmfr"
-//OSM FR utilise les données OSM avec une charte graphique développé pour le territoire français 
-var osmfr = L.tileLayer('http://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png',
-{
-	attribution: '<b>Fond de carte</b> © <a href="http://osm.org/copyright">OpenStreetMap</a>/ODbL - rendu <a href="http://openstreetmap.fr">OSM France</a><br>' + attribMARGINOV,
-	opacity: 0.6,
-	minZoom: 0,
-	maxZoom: 19,
-	bounds: [
-		[40, -6],
-		[55, 9]
-	],
-});
-
-// Ajouter la couche "osmfr" à la carte		
+	
 // création d'une couche "bwLayer" un fond de carte en grisaille
 var bwLayer = L.tileLayer('https://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png',
 {
@@ -347,37 +334,11 @@ info.addTo(map)
 /*Affichage du control Info en fonction des couches sélectionnées
 le control ne s'affiche que si la couche est affichée*/
 
-function displayInfo()
-{
-	if (map.hasLayer(coucheTerritoires))
-	{
-		info.addTo(this);
-	}
-	else
-	{
-		info.remove(this);
-	}
-}
 map.on('overlayadd', displayInfo);
 map.on('overlayremove', displayInfo);
 
 
 
-/*5. création du controleur de couches*/
-/////Controleur des couches
-var fond = {
-	"Fond de carte en couleur": osmfr,
-	"Fond de carte en grisaille": bwLayer
-};
-var overlays = {
-	"Périmètres administratifs": coucheTerritoires,
-};
-//var overlays = {"Innovations": iconclustersInit};
-var controlLayers = L.control.layers(fond, null,
-{
-	collapsed: false,
-	position: 'bottomleft',
-}).addTo(map);
 
 </script>
 
