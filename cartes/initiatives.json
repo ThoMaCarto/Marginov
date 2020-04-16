@@ -2,18 +2,18 @@ var initiatives = {
   "type": "FeatureCollection",
   "features": [
     {"type": "Feature",
-	"properties": {"name": "Scierie de Moustey","cat": "Plateforme échanges & innovations","typecss":"lieu-echange","actors": ["PNR","Commune","Communauté de Communes","ENSAP-Bx","LEADER"],"illustre":"http://www.marginov.cnrs.fr/wp-content/uploads/2020/02/DSCF6024.jpg","link":"http://www.marginov.cnrs.fr/?page_id=950"},
+	"properties": {"name": "Scierie de Moustey","cat": "Plateforme échanges & innovations","typecss":"lieu-echange","labo": "Haute-Lande","actors": ["PNR","Commune","Communauté de Communes","ENSAP-Bx","LEADER"],"illustre":"http://www.marginov.cnrs.fr/wp-content/uploads/2020/02/DSCF6024.jpg","link":"http://www.marginov.cnrs.fr/?page_id=950"},
       "geometry": {"type": "Point","coordinates": [-0.7643330097198486,44.356221776011104]}
     },
     {"type": "Feature",
-      "properties": {"name":"ABrocasDabra","cat":"Atelier Participatif","typecss":"atelier-part","actors":["Commune","ENSAP-Bx","Habitants"],"illustre":"http://www.marginov.cnrs.fr/wp-content/uploads/2020/02/DSCF5972.jpg","link":"#"},
+      "properties": {"name":"ABrocasDabra","cat":"Atelier Participatif","typecss":"atelier-part","labo": "Haute-Lande","actors":["Commune","ENSAP-Bx","Habitants"],"illustre":"http://www.marginov.cnrs.fr/wp-content/uploads/2020/02/DSCF5972.jpg","link":"#"},
       "geometry": {"type": "Point","coordinates": [-0.5369165539741516,44.0439687710076]}
     },
-	{"type": "Feature","properties": {"name":"Logement modulable temporaire","cat":"prototype de construction","typecss":"prototype-archi","actors":["Association(s)","Entreprise(s) locale(s)","ENSAP-Bx"],"illustre":"","link":"#"},
+	{"type": "Feature","properties": {"name":"Logement modulable temporaire","cat":"prototype de construction","typecss":"prototype-archi","labo": "Haute-Lande","actors":["Association(s)","Entreprise(s) locale(s)","ENSAP-Bx"],"illustre":"","link":"#"},
       "geometry": {"type": "Point",
         "coordinates": [-0.5218505859375,44.26241249401097]}
 	},
-	{"type": "Feature","properties": {"name":"Airial Landais","cat":"Patrimoine/ressource","typecss":"patrimoine","actors":["Association(s)","PNR","ENSAP-Bx"],"illustre":"","link":"#"},
+	{"type": "Feature","properties": {"name":"Airial Landais","cat":"Patrimoine/ressource","typecss":"patrimoine","labo": "Haute-Lande","actors":["Association(s)","PNR","ENSAP-Bx"],"illustre":"","link":"#"},
       "geometry": {"type": "Point",
         "coordinates": [-0.7911255955696106,44.49172404467003]}
 	},	
