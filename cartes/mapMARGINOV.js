@@ -107,6 +107,19 @@ function displayTerritories(d){
 	
 }
 
+function displayPanneau(afficherPanneau){
+	if(afficherPanneau === true) {[panneau.style.display='',displayFiltreActeurs(afficherFiltresActeurs),displayLegendeInitiatives(AfficherLegendeInitiatives)]}
+};
+displayPanneau(afficherPanneau);
+
+function displayFiltreActeurs(afficherFiltresActeurs){
+	if(afficherFiltresActeurs === true) {actors.style.display=''}
+};
+
+
+function displayLegendeInitiatives(AfficherLegendeInitiatives){
+	if(AfficherLegendeInitiatives === true) {actors.style.display=''}
+};
 
 
 
@@ -332,29 +345,20 @@ var checkboxStates = {
 	Type: typAct3,
 };
 
-/*Création du panneau de commande des types d'acteurs et de la légende des couleurs d'initiatives*/
+/*Création du panneau de commande des types d'acteurs*/
 
-var div = document.getElementById('actors');
+var div1 = document.getElementById('actors');
+
 var actorscheckBox = '';
 for (var i = 0; i < typAct3.length; i++)
 {
 	actorscheckBox += '<input class="input" id="' + typAct3[i] + '" type="checkbox" value="' + typAct3[i] + '" onclick="updateInitiativeLayer()" checked/>' + typAct3[i] + '<br>';
 }
-var gradesInit = ["atelier-part", "lieu-echange", "prototype-archi", "patrimoine"],
-	labelsInit = ["Ateliers participatifs", "Plateforme échanges&innovations", "Prototype architectural", "Patrimoine"];
-var legendeInit = '';
-for (var i = 0; i < gradesInit.length; i++)
-{
-	legendeInit += '<div class="map-label ' + gradesInit[i] + '" style="position:relative;"><div class="map-label-content" style="font-size:14px;position:relative;border:0;background-color:rgba(0,0,0,0);box-shadow: 0px 0px 0px 0px rgba(0, 0, 0,0);">' + labelsInit[i] + '</div></div><br>'
-}
-div.innerHTML = '<h4>Type de partenaires</h4><input id="all" class="input" type="checkbox" onclick="toggle(this);updateInitiativeLayer()" checked/><b>Tout sélectionner</b><br>' 
-+ actorscheckBox + '<br>'
-+'<h4>Type d\'innovations</h4>'
-+'<div style="display:flex;flex-direction:row;">'
-+'<div style="display:flex;max-width:20px;"><div class="map-label" style="position:relative;"><div class="map-label-content">[M]</div><div class="map-label-arrow" ></div></div></div>'
-+'<div style="margin : auto auto auto 6px;"><b>Experience Marginov</b></div>'
-+'</div>'
-+'<div style="overflow:hidden;">'+ legendeInit + '</div>';
+div1.innerHTML = '<h4>Type de partenaires</h4><input id="all" class="input" type="checkbox" onclick="toggle(this);updateInitiativeLayer()" checked/><b>Tout sélectionner</b><br>' 
++ actorscheckBox;
+
+
+
 // fonction de mise à jours de la liste des filtre
 function updateCheckboxStates()
 {
@@ -390,6 +394,24 @@ var initiativesChecked = {
 updateInitiativesChecked();
 var iconclustersInit;
 var initLayerTemp;
+
+
+////Création d'un panneau de légende des initiatives
+var div2 = document.getElementById('initiatives');
+var gradesInit = ["atelier-part", "lieu-echange", "prototype-archi", "patrimoine"],
+	labelsInit = ["Ateliers participatifs", "Plateforme échanges&innovations", "Prototype architectural", "Patrimoine"];
+var legendeInit = '';
+for (var i = 0; i < gradesInit.length; i++)
+{
+	legendeInit += '<div class="map-label ' + gradesInit[i] + '" style="position:relative;"><div class="map-label-content" style="font-size:14px;position:relative;border:0;background-color:rgba(0,0,0,0);box-shadow: 0px 0px 0px 0px rgba(0, 0, 0,0);">' + labelsInit[i] + '</div></div><br>'
+}
+
+div2.innerHTML ='<h4>Type d\'innovations</h4>'
++'<div style="display:flex;flex-direction:row;">'
++'<div style="display:flex;max-width:20px;"><div class="map-label" style="position:relative;"><div class="map-label-content">[M]</div><div class="map-label-arrow" ></div></div></div>'
++'<div style="margin : auto auto auto 6px;"><b>Experience Marginov</b></div>'
++'</div>'
++'<div style="overflow:hidden;">'+ legendeInit + '</div>';
 
 /*Fonction affichant la couche sous la forme d'agglomérat de point (clusters)*/
 function displayLayersInit()

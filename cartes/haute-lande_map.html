@@ -44,7 +44,10 @@
 <section class="content">
 	
 	<div id="map" class="map"></div>
-	<div  id="actors" class="panneau"></div>
+	<div id="panneau" class="panneau" style="display: none;">
+		<div id="actors" style="display: none;"></div>
+		<div id = "initiatives" style="display: none;"></div>
+	</div>
 	<div  id="initiatives" class="filtercats"></div>
 	
 	
@@ -59,6 +62,9 @@ var centerMap = [44.4122, -0.5603]; /*coordonnées du centre de la carte (ex. Mo
 var filtreMap = "Haute-Lande"; /*filtrage des éléments affiché: tous les élements ou seulement un territoire laboratoire*/
 var typeFond = "gris";/* apparence du fond de carte : "gris" ou "couleurs"*/
 var afficherTerritoires = false; /*afficher les périmètres administratifs ou non*/
+var afficherPanneau = true; /*afficher le panneau d'information latéral ou non. Si false, alors les deux paramètres suivants seront invisibles.*/
+var afficherFiltresActeurs = true; /*afficher le panneau permettant de filtrer les initiatives par types d'acteurs*/
+var AfficherLegendeInitiatives = true; /*afficher les panneau de légende des types d'initiatives*/
 
 
 </script>
