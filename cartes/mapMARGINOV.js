@@ -229,7 +229,7 @@ info.update = function(props)
 
 var coucheTerritoires = L.geoJson(territoires,
 { //la fonction L.geoJson crée une couche layer à partir de donnée au format geojson
-	filter: filterLabo;
+	filter: filterLabo,
 	style: function(feature)
 	{
 		return {
@@ -399,7 +399,7 @@ function displayLayersInit()
 	////Couche d'intitatives en fonction des acteurs cochés
 	var initLayerTemp = L.geoJson(initiativesChecked,
 	{
-		filter: filterLabo;
+		filter: filterLabo,
 		pointToLayer: function(feature, latlng)
 		{
 			// Création de l'icone initiatives
