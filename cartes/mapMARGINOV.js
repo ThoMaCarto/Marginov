@@ -117,12 +117,12 @@ displayPanneau(afficherPanneau);
 
 //afficher le filtre des acteurs
 function displayFiltreActeurs(afficherFiltresActeurs){
-	if(afficherFiltresActeurs === true) {actors.style.display=''}
+	if(afficherFiltresActeurs === true) {actors.style.display='';}
 };
 
 //affichezr la légende des initiatives
 function displayLegendeInitiatives(AfficherLegendeInitiatives){
-	if(AfficherLegendeInitiatives === true) {actors.style.display=''}
+	if(AfficherLegendeInitiatives === true) {initiatives.style.display='';}
 };
 
 
