@@ -280,6 +280,7 @@ var coucheTerritoires = L.geoJson(territoires,
 	onEachFeature: onEachTerritoires,
 });
 
+
 ///paramètrage de la vue dela carte
 var centerMaptest = [coucheTerritoires.getBounds().getCenter().lat,coucheTerritoires.getBounds().getCenter().lng];
 //si le centerMap = auto est auto alros centre de gravité de la couche territoires, sinon utilisation de la valeur de centermap
