@@ -15,7 +15,7 @@
 	}
 	
    .map{
-	flex:2 2 2;
+	flex:1 1 auto;
 	/*width: 70%;*/
 	height: 500px;
 	z-index: 0;
