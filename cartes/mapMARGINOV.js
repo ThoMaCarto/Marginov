@@ -19,7 +19,8 @@ var map = L.map('map',
 		[55, 9]
 	],
 });
-map.setView(centerMap, zoomMap);
+//map.setView(centerMap, zoomMap); calculer automatiquement à partir du centroide de la couche territoires
+
 
 
 //création des différents niveaux d'affichage des couches: les panes
@@ -278,6 +279,17 @@ var coucheTerritoires = L.geoJson(territoires,
 	},
 	onEachFeature: onEachTerritoires,
 });
+
+///paramètrage de la vue dela carte
+var centerMaptest = [coucheTerritoires.getBounds().getCenter().lat,coucheTerritoires.getBounds().getCenter().lng];
+//si le centerMap = auto est auto alros centre de gravité de la couche territoires, sinon utilisation de la valeur de centermap
+function setMapCenter (centerMap){
+	if (centerMap === "auto"){return centerMaptest;}else{return centerMap;}
+}
+map.setView(setMapCenter (centerMap), zoomMap);
+
+
+
 displayTerritories(afficherTerritoires)//paramètré dans le fichier HTML
 
 /*Affichage du control Info en fonction des couches sélectionnées
@@ -528,7 +540,7 @@ function updateInitiativeLayer()
 /*5. création du controleur de couches*/
 /////Controleur des couches
 var fond = {
-	"Fond de carte en couleur": osmfr,
+	"Fond de carte en couleurs": osmfr,
 	"Fond de carte en grisaille": bwLayer
 };
 var overlays = {
