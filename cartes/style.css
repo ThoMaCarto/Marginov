@@ -61,7 +61,7 @@
 	/*max-width:25%;*/
 	}
 	
-	.info h4,#actors h4 {
+	.info h4,.panneau h4 {
     margin: 0 0 5px;
     color: #777;
 	}
