@@ -101,6 +101,15 @@ function designFond (d){
 }
 map.addLayer(designFond (typeFond));
 
+function displayTerritories(d){
+	if(d === true) {return [map.addLayer(coucheTerritoires),map.addControl(info),];}
+	else{return [map.removeLayer(coucheTerritoires),map.removeControl(info),];}
+	
+}
+
+
+
+
 /*2. Création et affichage de la couche contours administratifs*/
 
 
@@ -252,7 +261,7 @@ var coucheTerritoires = L.geoJson(territoires,
 	},
 	onEachFeature: onEachTerritoires,
 });
-
+displayTerritories(afficherTerritoires)//paramètré dans le fichier HTML
 
 /*Affichage du control Info en fonction des couches sélectionnées
 le control ne s'affiche que si la couche est affichée*/
@@ -483,7 +492,8 @@ function updateInitiativeLayer()
 	};
 	map.on('overlayadd', displayInfo);
 	map.on('overlayremove', displayInfo);
-	map.addLayer(designFond); //paramtere dans le HTML
+	map.addLayer(designFond (typeFond)); //paramtere dans le HTML
+	displayTerritories(afficherTerritoires)//paramètré dans le fichier HTML
 };
 
 
