@@ -44,11 +44,12 @@
 <section class="content">
 	
 	<div id="map" class="map"></div>
+	<!--l'affichage des div suivant (panneaux latéreaux de légende dépend des paramètres du script javascript cf. footer>script -->
 	<div id="panneau" class="panneau" style="display: none;">
 		<div id="actors" style="display: none;"></div>
 		<div id = "initiatives" style="display: none;"></div>
 	</div>
-	<div  id="initiatives" class="filtercats"></div>
+	
 	
 	
 </section>
@@ -57,9 +58,10 @@
 
 <script>
 /*Paramètres de la carte*/
+/*Saisir ici tous les paramètres de la carte*/
 var zoomMap = 8; /* échelle régionale = 8, échelle local = 16*/
 var centerMap = [44.4122, -0.5603]; /*coordonnées du centre de la carte (ex. Moustey = [44.35622,-0.76433]*/
-var filtreMap = "Haute-Lande"; /*filtrage des éléments affiché: tous les élements ou seulement un territoire laboratoire*/
+var filtreMap = ["Haute-Lande","Medoc"]; /*filtrage des éléments affiché: tous les élements ou seulement un territoire laboratoire*/
 var typeFond = "gris";/* apparence du fond de carte : "gris" ou "couleurs"*/
 var afficherTerritoires = false; /*afficher les périmètres administratifs ou non*/
 var afficherPanneau = true; /*afficher le panneau d'information latéral ou non. Si false, alors les deux paramètres suivants seront invisibles.*/

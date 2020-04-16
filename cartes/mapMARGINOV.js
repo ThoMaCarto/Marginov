@@ -87,11 +87,12 @@ north.onAdd = function(map)
 north.addTo(map);
 
 //fonctions associées aux paramètres du fichier html
+//filtrer les territoires-laboratoires affichés
 function filterLabo(feature) {
-  if (feature.properties.labo === filtreMap) return true
+  if (filtreMap.includes(feature.properties.labo)) return true
 }
 
-
+//sélectionner le type de fond de carte
 function designFond (d){
 	switch (d){
 		case "gris": return bwLayer;
@@ -101,22 +102,25 @@ function designFond (d){
 }
 map.addLayer(designFond (typeFond));
 
+//Afficher la couche de périmètres administratifs
 function displayTerritories(d){
 	if(d === true) {return [map.addLayer(coucheTerritoires),map.addControl(info),];}
 	else{return [map.removeLayer(coucheTerritoires),map.removeControl(info),];}
 	
 }
 
+//Afficher le panneau latéral
 function displayPanneau(afficherPanneau){
 	if(afficherPanneau === true) {[panneau.style.display='',displayFiltreActeurs(afficherFiltresActeurs),displayLegendeInitiatives(AfficherLegendeInitiatives)]}
 };
 displayPanneau(afficherPanneau);
 
+//afficher le filtre des acteurs
 function displayFiltreActeurs(afficherFiltresActeurs){
 	if(afficherFiltresActeurs === true) {actors.style.display=''}
 };
 
-
+//affichezr la légende des initiatives
 function displayLegendeInitiatives(AfficherLegendeInitiatives){
 	if(AfficherLegendeInitiatives === true) {actors.style.display=''}
 };
