@@ -18,8 +18,8 @@ L’objectif général du projet MARGINOV est d’interroger les différentes ma
 Pour créer une nouvelle carte et la paramètrer, il suffit de faire une copie du fichier cartes/index.html et de modifier les paramètres situés dans le script du footer. Les valeurs par défaut sont:
 
 ~~~~
-var zoomMap = 8;      /* échelle régionale = 8, échelle local = 16*/
-var centerMap = "auto";      /* si  "auto" le centre de la carte sera le centroide de la couche territoires*/
+var zoomMap = 8;      /* échelle régionale = 8, échelle locale = 16*/
+var centerMap = "auto";      /* si  "auto" le centre de la carte sera le centroide de la couche territoires, sinon insérer coord.[lat,lng]*/
 var filtreMap = ["Haute-Lande"];      /*liste des territoires laboratoire a afficher*/
 var typeFond = "gris";     /* apparence du fond de carte : "gris" ou "couleurs"*/
 var afficherTerritoires = false;      /*afficher les périmètres administratifs ou non*/
@@ -27,7 +27,6 @@ var afficherInitiatives = true;      /*afficher ou non les puces des initiatives
 var afficherPanneau = true;      /*afficher le panneau d'information latéral ou non.*/
 var afficherFiltresActeurs = true;      /*afficher le panneau permettant de filtrer les initiatives par types d'acteurs*/
 var AfficherLegendeInitiatives = true;      /*afficher les panneau de légende des types d'initiatives*/
-
 ~~~~
 
 
