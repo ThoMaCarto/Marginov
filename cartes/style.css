@@ -1,0 +1,196 @@
+ 
+   .content{
+   	display: flex;
+	flex-direction:row;
+	min-height: 80%;
+    max-height: 100%;
+	flex:1;
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	border:0px solid #000;
+	justify-content: space-around;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	}
+	
+   .map{
+	width: 70%;
+	height: 500px;
+	z-index: 0;
+	}
+	
+	.map100{
+	width: 100%;
+	height: 400px;
+	z-index: 0;
+	}
+   
+   	
+	.filtercats{
+	display:flex;
+	flex-wrap:wrap;
+	justify-content: space-between;
+	}
+	
+			
+	.checkboxes{
+	margin-left:50%;
+	}
+	
+	.info {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;*/ 
+	text-align: right;
+	background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+	max-width:230px;
+	}
+	
+	
+	
+	#actors{
+	padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;*/ 
+	text-align: right;
+	background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+	max-width:25%;
+	}
+	
+	.info h4,#actors h4 {
+    margin: 0 0 5px;
+    color: #777;
+	}
+	
+	.legend {
+    line-height: 18px;
+    color: #555;
+	}
+	
+	.legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.7;
+	}
+
+
+	/*icones des initiatives*/
+	.map-label {
+	position: absolute;
+	bottom: 0;left:50%;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	
+	}
+
+	.legend-label-cont{
+	display:flex;
+	flex-direction:row;
+	flex-wrap: wrap;
+	position: relative;
+	bottom: 0;right: -23%;
+	justify-content:space-between;
+	padding:0%;
+	max-width:230px;
+	
+	}
+
+	.legend-label{
+	margin:1%;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	}
+
+
+.map-label-content {
+  order: 1;
+  position: relative; left: -50%; 
+  background-color: #fff;
+  border-radius: 5rem;
+  border-width: 3px;
+  border-style: solid;
+  border-color: #444;
+  padding: 2px 4px 3px 2px;
+  /*padding: 3px;*/
+  /*white-space: wrap;*/
+  max-width:100px;
+  height: 12px;
+  width:12px;
+  box-shadow: 6px 10px 6px 0px rgba(0, 0, 0,.5);
+  background-clip: border-box;
+  line-height: 10px;
+  text-align:center;
+  vertical-align:center;
+  font-size: 10px;
+  font-smooth: always;
+  font-weight:bolder;
+  font-variant-caps: all-small-caps;
+  }
+
+/*pointe de flèche*/
+.map-label-arrow {
+  order: 2;
+  width: 0px; height: 0px; left: 50%;
+  border-style: solid;
+  border-color: #444 transparent transparent transparent;
+  border-width: 15px 6px 0 6px;
+  margin-left: -6px;
+  margin-top:-2px;
+  z-index:100;
+  
+ 
+}
+
+/*class en fonction de typecss*/
+.lieu-echange > .map-label-content {
+  border-color: #b30000;
+  color: #b30000;
+}
+.lieu-echange > .map-label-arrow {
+  border-top-color: #b30000;
+  /*color: #b30000;*/
+  }
+.atelier-part > .map-label-content {
+  border-color: #999900;
+  color: #999900;
+}
+.atelier-part > .map-label-arrow {
+  border-top-color: #999900;
+  /*color: #999900;*/
+}
+.prototype-archi > .map-label-content {
+  border-color: #ff9900;
+  color:#ff9900;
+}
+.prototype-archi > .map-label-arrow {
+  border-top-color: #ff9900;
+  /*color:#ff9900;*/
+}
+.patrimoine> .map-label-content{
+	border-color: #873600;
+  color:#873600;
+}
+.patrimoine> .map-label-arrow{
+	border-top-color: #873600;
+  /*color:#873600;*/
+}
+
+.mycluster{
+  background-clip: padding-box;
+  background-color: rgba(65,105,225, .9);
+  border: 3px solid rgba(65,105,225, .6);
+ text-align: center;
+  font: 12px "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  border-radius: 5rem;
+  line-height:30px;
+  box-shadow: 6px 6px 6px 0px rgba(0, 0, 0,.5);
+}
+  
