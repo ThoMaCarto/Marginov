@@ -122,7 +122,7 @@ function displayFiltreActeurs(afficherFiltresActeurs){
 
 //affichezr la légende des initiatives
 function displayLegendeInitiatives(AfficherLegendeInitiatives){
-	if(AfficherLegendeInitiatives === true) {initiatives.style.display='';}
+	if(AfficherLegendeInitiatives === true) {initiativeLegend.style.display='';}
 };
 
 
@@ -401,7 +401,7 @@ var initLayerTemp;
 
 
 ////Création d'un panneau de légende des initiatives
-var div2 = document.getElementById('initiatives');
+var div2 = document.getElementById('initiativeLegend');
 var gradesInit = ["atelier-part", "lieu-echange", "prototype-archi", "patrimoine"],
 	labelsInit = ["Ateliers participatifs", "Plateforme échanges&innovations", "Prototype architectural", "Patrimoine"];
 var legendeInit = '';
