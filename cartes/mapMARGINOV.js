@@ -486,7 +486,7 @@ function displayLayersInit()
 	//Afficher la couche des initiatives
 	//si paramètré dans le HTML
 	function displayInitiatives(d){
-		if(d === true) {return iconclustersInit.addTo(map);;}
+		if(d === true) {return map.addLayer(iconclustersInit);}
 		else{return map.removeLayer(iconclustersInit);}
 	}
 	displayInitiatives(afficherInitiatives);//paramètré dans le fichier HTML
