@@ -15,17 +15,20 @@ L’objectif général du projet MARGINOV est d’interroger les différentes ma
 
 ## paramètrage des cartes.
 
-Pour créer une nouvelle carte et la paramètrer, il suffit de faire une copie du fichier cartes/index.html et de modifier les paramètres situés dans le script du footer.
+Pour créer une nouvelle carte et la paramètrer, il suffit de faire une copie du fichier cartes/index.html et de modifier les paramètres situés dans le script du footer. Les valeurs par défaut sont:
 
 ~~~~
-var zoomMap = 8; /* échelle régionale = 8, échelle locale = 16*/
-var centerMap = "auto";/*[44.4122, -0.5603];coordonnées du centre de la carte (ex. Moustey = [44.35622,-0.76433]) si  "auto" le centre de la carte sera le centroide de la couche territoires*/
-var filtreMap = ["Haute-Lande"]; /*filtrage des éléments affiché: tous les élements ou seulement un territoire laboratoire: ex["Medoc","Creuse","Haute-Lande"]*/
+var zoomMap = 8; /* échelle régionale = 8, échelle local = 16*/
+var centerMap = "auto"; /* si  "auto" le centre de la carte sera le centroide de la couche territoires*/
+var filtreMap = ["Haute-Lande"]; /*liste des territoires laboratoire a afficher*/
 var typeFond = "gris";/* apparence du fond de carte : "gris" ou "couleurs"*/
-var afficherTerritoires = true; /*afficher les périmètres administratifs ou non*/
-var afficherPanneau = false; /*afficher le panneau d'information latéral ou non. Si false, alors les deux paramètres suivants seront invisibles.*/
-var afficherFiltresActeurs = false; /*afficher le panneau permettant de filtrer les initiatives par types d'acteurs*/
-var AfficherLegendeInitiatives = false; /*afficher les panneau de légende des types d'initiatives*/
+var afficherTerritoires = false; /*afficher les périmètres administratifs ou non*/
+var afficherInitiatives = true; /*afficher ou non les puces des initiatives*/
+var afficherPanneau = true; /*afficher le panneau d'information latéral ou non. 
+Si false, alors les deux paramètres suivants seront invisibles.*/
+var afficherFiltresActeurs = true; /*afficher le panneau permettant de filtrer les initiatives par types d'acteurs*/
+var AfficherLegendeInitiatives = true; /*afficher les panneau de légende des types d'initiatives*/
+
 ~~~~
 
 
