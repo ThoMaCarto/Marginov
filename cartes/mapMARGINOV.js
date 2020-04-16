@@ -62,7 +62,7 @@ var bwLayer = L.tileLayer('https://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png',
 	opacity: 0.8,
 	maxZoom: 19,
 });
-map.addLayer(bwLayer);
+
 
 //échelle
 L.control.scale(
@@ -86,10 +86,20 @@ north.onAdd = function(map)
 }
 north.addTo(map);
 
-//filtre de la carte paramètré dans le fichier html
+//fonctions associées aux paramètres du fichier html
 function filterLabo(feature) {
   if (feature.properties.labo === filtreMap) return true
 }
+
+
+function designFond (d){
+	switch (d){
+		case "gris": return bwLayer;
+		case "couleurs": return osmfr;
+		default: return bwLayer;
+	}
+}
+map.addLayer(designFond (typeFond));
 
 /*2. Création et affichage de la couche contours administratifs*/
 
@@ -473,7 +483,7 @@ function updateInitiativeLayer()
 	};
 	map.on('overlayadd', displayInfo);
 	map.on('overlayremove', displayInfo);
-	map.addLayer(bwLayer);
+	map.addLayer(designFond); //paramtere dans le HTML
 };
 
 
