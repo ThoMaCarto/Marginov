@@ -206,7 +206,7 @@ function getTerritoireOpacity(d)
 
 /*Les fonctions suivantes permettent de modifier l'affichage d'un perimètre lorsque la souris glisse dessus*/
 // affichage spécifique pour mettre en avant un élément de la couche
-function highlightFeature(e, d)
+function highlightFeature(e)
 {
 	var layer = e.target;
 	///Création du motif de ligne
