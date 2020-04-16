@@ -110,6 +110,8 @@ function displayTerritories(d){
 	
 }
 
+
+
 //Afficher le panneau latéral
 function displayPanneau(afficherPanneau){
 	if(afficherPanneau === true) {[panneau.style.display='',displayFiltreActeurs(afficherFiltresActeurs),displayLegendeInitiatives(AfficherLegendeInitiatives)]}
@@ -481,7 +483,13 @@ function displayLayersInit()
 	//intégration des marqueurs aux clusters
 	iconclustersInit.addLayer(initLayerTemp);
 	//intégration des clusters à la carte
-	iconclustersInit.addTo(map);
+	//Afficher la couche des initiatives
+	//si paramètré dans le HTML
+	function displayInitiatives(d){
+		if(d === true) {return iconclustersInit.addTo(map);;}
+		else{return map.removeLayer(iconclustersInit);}
+	}
+	displayInitiatives(afficherInitiatives);//paramètré dans le fichier HTML
 };
 
 //mise à jour du geoJSON temporaire 
@@ -533,6 +541,7 @@ function updateInitiativeLayer()
 	map.on('overlayremove', displayInfo);
 	map.addLayer(designFond (typeFond)); //paramètré dans le fichier HTML
 	displayTerritories(afficherTerritoires)//paramètré dans le fichier HTML
+	displayInitiatives(afficherInitiatives)//paramètré dans le fichier HTML
 	
 };
 
