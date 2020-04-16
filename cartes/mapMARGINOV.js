@@ -372,7 +372,7 @@ for (var i = 0; i < typAct3.length; i++)
 	actorscheckBox += '<input class="input" id="' + typAct3[i] + '" type="checkbox" value="' + typAct3[i] + '" onclick="updateInitiativeLayer()" checked/>' + typAct3[i] + '<br>';
 }
 div1.innerHTML = '<h4>Type de partenaires</h4><input id="all" class="input" type="checkbox" onclick="toggle(this);updateInitiativeLayer()" checked/><b>Tout sélectionner</b><br>' 
-+ actorscheckBox;
++ actorscheckBox+'<br>';
 
 
 
