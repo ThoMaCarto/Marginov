@@ -492,8 +492,9 @@ function updateInitiativeLayer()
 	};
 	map.on('overlayadd', displayInfo);
 	map.on('overlayremove', displayInfo);
-	map.addLayer(designFond (typeFond)); //paramtere dans le HTML
+	map.addLayer(designFond (typeFond)); //paramètré dans le fichier HTML
 	displayTerritories(afficherTerritoires)//paramètré dans le fichier HTML
+	
 };
 
 
