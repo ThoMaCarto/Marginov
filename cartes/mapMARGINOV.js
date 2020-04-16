@@ -19,7 +19,7 @@ var map = L.map('map',
 		[55, 9]
 	],
 });
-map.setView([44.4122, -0.5603], 8);
+map.setView(centerMap, zoomMap);
 
 
 //création des différents niveaux d'affichage des couches: les panes
