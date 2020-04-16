@@ -15,7 +15,7 @@ L’objectif général du projet MARGINOV est d’interroger les différentes ma
 
 ## paramètrage des cartes.
 
-Pour créer une nouvelle carte et la paramètrer, il suffit de faire une copie du fichier cartes/index.html et de modifier les paramètres situés dans le script du footer. Les valeurs par défaut sont:
+Pour créer une nouvelle carte et la paramètrer, il suffit de faire une copie du fichier cartes/map_default.html et de modifier les paramètres situés dans le script du footer. Les valeurs par défaut sont:
 
 ~~~~
 var zoomMap = 8;                        /* échelle régionale = 8, échelle locale = 16*/
@@ -26,7 +26,7 @@ var afficherTerritoires = false;        /*afficher les périmètres administrati
 var afficherInitiatives = true;         /*afficher ou non les puces des initiatives*/
 var afficherPanneau = true;             /*afficher le panneau d'information latéral ou non.*/
 var afficherFiltresActeurs = true;      /*afficher le panneau permettant de filtrer les initiatives par types d'acteurs*/
-var AfficherLegendeInitiatives = true;   /*afficher les panneau de légende des types d'initiatives*/
+var AfficherLegendeInitiatives = true;  /*afficher les panneau de légende des types d'initiatives*/
 ~~~~
 
 
