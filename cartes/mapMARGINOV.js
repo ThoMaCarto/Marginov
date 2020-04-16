@@ -86,6 +86,11 @@ north.onAdd = function(map)
 }
 north.addTo(map);
 
+//filtre de la carte paramètré dans le fichier html
+function filterLabo(feature) {
+  if (feature.properties.labo === filtreMap) return true
+}
+
 /*2. Création et affichage de la couche contours administratifs*/
 
 
@@ -224,6 +229,7 @@ info.update = function(props)
 
 var coucheTerritoires = L.geoJson(territoires,
 { //la fonction L.geoJson crée une couche layer à partir de donnée au format geojson
+	filter: filterLabo;
 	style: function(feature)
 	{
 		return {
@@ -393,7 +399,7 @@ function displayLayersInit()
 	////Couche d'intitatives en fonction des acteurs cochés
 	var initLayerTemp = L.geoJson(initiativesChecked,
 	{
-		//filter:  function checkfilter(feature){const isTypeChecked = checkboxStates.Type.includes(feature.properties.actors);return isTypeChecked;},
+		filter: filterLabo;
 		pointToLayer: function(feature, latlng)
 		{
 			// Création de l'icone initiatives
