@@ -1,4 +1,4 @@
-var initiatives = {
+{
   "type": "FeatureCollection",
   "name": "marginov-innovations",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
