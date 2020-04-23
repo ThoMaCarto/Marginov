@@ -42,8 +42,54 @@
 
 
 <body>
-
 <section class="content">
+	<div class="panneau">
+	
+		<form style="display:flex;flex-direction:column;justify-content:flex-start;margin:auto;">
+		<legend><b>Paramètrer la carte</b></legend>
+		<fieldset style="width=45%;">
+			<legend>Contenu de la carte</legend>
+			<p>Territoires-laboratoire Marginov à afficher :</p>
+			<div id="terrlab">
+			<input type="checkbox" name="terrlab" value="Haute-Lande" checked><label>Haute-Lande</label>
+			<input type="checkbox" name="terrlab" value="Creuse"><label>Creuse</label>
+			<input type="checkbox" name="terrlab" value="Médoc"><label>Médoc</label>
+			<input type="checkbox" name="terrlab" value="Pays basque intérieur"><label>Pays basque intérieur</label><br/>
+			<input type="checkbox" name="terrlab" value="Nord Gironde"><label>Nord Gironde</label>
+			<input type="checkbox" name="terrlab" value="Pau"><label>Pau</label>
+			<input type="checkbox" name="terrlab" value="autre"><label>autre</label>
+			</div>
+			<p>Afficher la couche des périmètres administratifs?
+			<input type="radio" name="afficherTerritoires" value="true" checked/><label>oui</label>
+			<input type="radio" name="afficherTerritoires" value="false"/><label>non</label></p>
+			<p>Afficher la couche des innovations?
+			<input type="radio" name="afficherInitiatives" value="true" checked/><label>oui</label>
+			<input type="radio" name="afficherInitiatives" value="false"/><label>non</label></p>
+		</fieldset>
+		<fieldset style="width=45%;">
+			<legend> Mise en page</legend>
+			<p>Niveau de zoom à l'ouverture : de 6 (région) à 16 (quartier).</p>
+			<input type="range" min="6" max="16" value="8" step="2" list="scale"/>
+			<datalist id="scale"><option value="6" label="6"><option value="8"><option value="10"><option value="12"><option value="14"><option value="16" label="16"></datalist>
+			
+			<p>Type de fond de carte?
+			<input type="radio" name="fond" value="gris" checked/><label>Gris</label>
+			<input type="radio" name="fond" value="couleurs"/><label>Couleurs</label></p>
+			<p>Afficher le filtrage des innovation par acteurs impliqués?
+			<input type="radio" name="afficherFiltresActeurs" value="true" checked/><label>oui</label>
+			<input type="radio" name="afficherFiltresActeurs" value="false"/><label>non</label></p>
+			<p>Afficher la légende des initiatives?
+			<input type="radio" name="AfficherLegendeInitiatives" value="true" checked/><label>oui</label>
+			<input type="radio" name="AfficherLegendeInitiatives" value="false"/><label>non</label></p>
+		</fieldset>
+		<fieldset><input type="submit" value="Mettre à jour la carte" /></fieldset>
+		</form>
+		
+	</div>
+
+
+
+
 	
 	<div id="map" class="map"></div>
 	<!--l'affichage des div suivant (panneaux latéreaux de légende dépend des paramètres du script javascript cf. footer>script -->
@@ -59,12 +105,38 @@
 <footer>
 
 <script>
+//récupération des valeurs pour filtreMap
+var CheckTerrLab = [];
+function updateCheckTerrLab (){
+CheckTerrLab.splice(0, CheckTerrLab.length); //remise à zéro de la liste checkterrlab
+var checkboxes = document.querySelectorAll('#terrlab>input');//liste des sélécteur dans l'élément avec l'id terrlab
+for (var i = 0; i < checkboxes.length; i++)
+	{
+		var check = [checkboxes[i].value];
+		if (checkboxes[i].checked)
+		{
+			CheckTerrLab.push(checkboxes[i].value)//récupération des valeurs dees éléments sélectionné et insertion da&ns la liste ChekTerrLab
+		};
+	};
+};
+
+//récupération des valeurs pour les autres champs de saisie
+var typeFond = [];
+function updateTypeFond (){
+	typeFond.splice(0,typeFond.length);
+	typeFond.push(document.forms[0].elements["fond"].value);	
+};
+
+
+</script>
+
+<script>
 /*Paramètres de la carte*/
 /*Saisir ici tous les paramètres de la carte en respectant bien la syntaxe*/
 var zoomMap = 8; /* échelle régionale = 8, échelle local = 16*/
 var centerMap = "auto";/*[44.4122, -0.5603];coordonnées du centre de la carte (ex. Moustey = [44.35622,-0.76433]) si  "auto" le centre de la carte sera le centroide de la couche territoires*/
 var filtreMap = ["Haute-Lande"]; /*filtrage des éléments affiché: tous les élements ou seulement un territoire laboratoire: ex["Medoc","Creuse","Haute-Lande"]*/
-var typeFond = "gris";/* apparence du fond de carte : "gris" ou "couleurs"*/
+//var typeFond = "gris"; //= ;//"gris";/* apparence du fond de carte : "gris" ou "couleurs"*/
 var afficherTerritoires = false; /*afficher les périmètres administratifs ou non*/
 var afficherInitiatives = true; /*afficher ou non les puces des initiatives*/
 var afficherPanneau = true; /*afficher le panneau d'information latéral ou non. Si false, alors les deux paramètres suivants seront invisibles.*/
