@@ -321,15 +321,20 @@ map.on('overlayremove', displayInfo);
 
 //créer un tableau contenant tous les types d'acteurs recensé typAct3
 var typAct2 = [];
+
 for (var i = 0; i < initiatives.features.length; i++)
 {
 	for (var e = 0; e < initiatives.features[i].properties.actors.length; e++)
 	{
+		if (filtreMap.includes(initiatives.features[i].properties.labo)){
 		var actorUnique = getCat(typAct2, initiatives.features[i].properties.actors[e]);
-		if (actorUnique === undefined)
-		{
-			actorUnique = [initiatives.features[i].properties.actors[e]]
 		}
+		
+			if (actorUnique === undefined)
+			{
+				actorUnique = [initiatives.features[i].properties.actors[e]]
+			}
+		
 		typAct2.push(actorUnique);
 	}
 }
@@ -417,20 +422,20 @@ var initLayerTemp;
 
 ////Création d'un panneau de légende des initiatives
 var div2 = document.getElementById('initiativeLegend');
-var gradesInit = ["atelier-part", "lieu-echange", "prototype-archi", "patrimoine"],
-	labelsInit = ["Ateliers participatifs", "Plateforme échanges&innovations", "Prototype architectural", "Patrimoine"];
+var gradesInit = ["atelier-part", "lieu-echange", "prototype-archi", "patrimoine","reseau","med-paysage"],
+	labelsInit = ["Ateliers participatifs", "Plateforme d'échanges et d'innovations", "Prototype architectural", "Patrimoine", "Mise en réseau d'acteurs", "Médiation paysagère"];
 var legendeInit = '';
 for (var i = 0; i < gradesInit.length; i++)
 {
-	legendeInit += '<div class="map-label ' + gradesInit[i] + '" style="position:relative;"><div class="map-label-content" style="font-size:14px;position:relative;border:0;background-color:rgba(0,0,0,0);box-shadow: 0px 0px 0px 0px rgba(0, 0, 0,0);">' + labelsInit[i] + '</div></div><br>'
+	legendeInit += '<div class="legend-init '+ gradesInit[i] +'-color-legend">' + labelsInit[i] + '</div>'
 }
 
 div2.innerHTML ='<h4>Type d\'innovations</h4>'
 +'<div style="display:flex;flex-direction:row;">'
-+'<div style="display:flex;max-width:20px;"><div class="map-label" style="position:relative;"><div class="map-label-content">[M]</div><div class="map-label-arrow" ></div></div></div>'
++'<div style="display:flex;max-width:100%;"><div class="map-label" style="position:relative;"><div class="map-label-content">[M]</div><div class="map-label-arrow" ></div></div></div>'
 +'<div style="margin : auto auto auto 6px;"><b>Experience Marginov</b></div>'
 +'</div>'
-+'<div style="overflow:hidden;">'+ legendeInit + '</div>';
++'<div style="max-width:200px;border:1px solid pink;">'+ legendeInit + '</div>';
 
 /*Fonction affichant la couche sous la forme d'agglomérat de point (clusters)*/
 function displayLayersInit()

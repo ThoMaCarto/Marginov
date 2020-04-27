@@ -150,14 +150,19 @@
 }
 
 /*class en fonction de typecss*/
-.lieu-echange > .map-label-content {
+.lieu-echange > .map-label-content{
   border-color: #b30000;
   color: #b30000;
 }
-.lieu-echange > .map-label-arrow {
+.lieu-echange > .map-label-arrow{
   border-top-color: #b30000;
   /*color: #b30000;*/
   }
+.lieu-echange-color-legend{
+    color: #b30000;
+}
+
+
 .atelier-part > .map-label-content {
   border-color: #999900;
   color: #999900;
@@ -166,6 +171,10 @@
   border-top-color: #999900;
   /*color: #999900;*/
 }
+.atelier-part-color-legend{
+    color: #999900;
+}
+
 .prototype-archi > .map-label-content {
   border-color: #ff9900;
   color:#ff9900;
@@ -174,6 +183,11 @@
   border-top-color: #ff9900;
   /*color:#ff9900;*/
 }
+.prototype-archi-color-legend{
+    color: #ff9900;
+}
+
+
 .patrimoine> .map-label-content{
 	border-color: #873600;
   color:#873600;
@@ -182,7 +196,41 @@
 	border-top-color: #873600;
   /*color:#873600;*/
 }
+.patrimoine-color-legend{
+    color: #873600;
+}
 
+.reseau>.map-label-content{
+  border-color: #008b99;
+  color: #008b99;
+}
+.reseau> .map-label-arrow {
+  border-top-color: #008b99;
+  /*color: #008b99;*/
+  }
+.reseau-color-legend{
+    color: #008b99;
+}
+  
+.med-paysage>.map-label-content{
+  border-color:  #996d00;
+  color:  #996d00;
+}
+.med-paysage> .map-label-arrow {
+  border-top-color: #996d00;
+  /*color: #996d00;*/
+  }
+.med-paysage-color-legend{
+    color: #996d00;
+}  
+  
+.legend-init{
+margin:6px 0;
+font-size: 14px;
+font-weight: bold;	
+
+}
+  
 .mycluster{
   background-clip: padding-box;
   background-color: rgba(65,105,225, .9);
