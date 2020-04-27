@@ -146,8 +146,9 @@ function getTerritoireColor(d)
 			return "#4ea547";
 		case "LEADER":
 			return "#f0c53e";
-		case "forest":
-			return "darkgreen";
+		case "ZONE":
+			return " #2874a6 ";
+			
 		default:
 			return "grey";
 	}
@@ -165,6 +166,8 @@ function getTerritoireWeight(d)
 			return 1;
 		case "LEADER":
 			return 1;
+		case "ZONE":
+			return 3;
 		default:
 			return 6;
 	}
@@ -182,6 +185,8 @@ function getTerritoirePane(d)
 			return "610";
 		case "LEADER":
 			return "610";
+		case "ZONE":
+			return "620";
 		default:
 			return "630";
 	}
@@ -198,6 +203,8 @@ function getTerritoireOpacity(d)
 		case "PNR":
 			return 0;
 		case "LEADER":
+			return 0;
+		case "ZONE":
 			return 0;
 		default:
 			return true;
@@ -435,7 +442,7 @@ div2.innerHTML ='<h4>Type d\'innovations</h4>'
 +'<div style="display:flex;max-width:100%;"><div class="map-label" style="position:relative;"><div class="map-label-content">[M]</div><div class="map-label-arrow" ></div></div></div>'
 +'<div style="margin : auto auto auto 6px;"><b>Experience Marginov</b></div>'
 +'</div>'
-+'<div style="max-width:200px;border:1px solid pink;">'+ legendeInit + '</div>';
++'<div style="max-width:200px;">'+ legendeInit + '</div>';
 
 /*Fonction affichant la couche sous la forme d'agglomérat de point (clusters)*/
 function displayLayersInit()
