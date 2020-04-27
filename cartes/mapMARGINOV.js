@@ -427,6 +427,7 @@ var iconclustersInit;
 var initLayerTemp;
 
 
+
 ////Création d'un panneau de légende des initiatives
 var div2 = document.getElementById('initiativeLegend');
 var gradesInit = ["atelier-part", "lieu-echange", "prototype-archi", "patrimoine","reseau","med-paysage"],
