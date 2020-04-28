@@ -36,6 +36,10 @@ Carte présentant les expérimentations menées dans la Haute-Lande par les cher
 
 **Lien vers la carte :** https://thomacarto.github.io/Marginov/cartes/hautelande_map_filtre_acteurs.html
 
+## Carte générale représentant l'ensemble des éléments cartographiés
+
+**Lien vers la carte :** https://thomacarto.github.io/Marginov/cartes/map_test_all.html
+
 
 
 
