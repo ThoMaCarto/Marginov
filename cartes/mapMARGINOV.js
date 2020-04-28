@@ -184,13 +184,13 @@ function getTerritoirePane(d)
 		case "Commune":
 			return "620";
 		case "EPCI":
-			return "615";
+			return "610";
 		case "PNR":
 			return "610";
 		case "Pays":
 			return "610";
 		case "LEADER":
-			return "610";
+			return "615";
 		case "ZONE":
 			return "620";
 		default:
