@@ -163,11 +163,11 @@ function getTerritoireWeight(d)
 		case "Commune":
 			return 1;
 		case "EPCI":
-			return 2;
+			return 1;
 		case "PNR":
-			return 2;
+			return 1;
 		case "Pays":
-			return 2;
+			return 1;
 		case "LEADER":
 			return 1;
 		case "ZONE":
