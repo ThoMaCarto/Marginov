@@ -429,9 +429,47 @@ var initLayerTemp;
 
 
 ////Création d'un panneau de légende des initiatives
+
+//créer un tableau contenant tous les types d'initiatives recensées et présentent sur la carte
+var labelsInit0 = [];
+
+for (var i = 0; i < initiatives.features.length; i++)
+{	
+	if (filtreMap.includes(initiatives.features[i].properties.labo)){
+		//if (initiatives.features[i].properties.cat !== undefined)
+		//	{
+				labelsInit0.push(initiatives.features[i].properties.cat);
+		//	}
+		 	
+	}
+}
+
+var labelsInit = removeDuplicates(labelsInit0);
+
+//idem pour le typeCSS
+
+var gradesInit0 = [];
+
+for (var i = 0; i < initiatives.features.length; i++)
+{
+	if (filtreMap.includes(initiatives.features[i].properties.labo)){
+		//if (initiatives.features[i].properties.typecss !== undefined)
+		//	{
+				gradesInit0.push(initiatives.features[i].properties.typecss);
+		//	}
+	}
+}
+
+var gradesInit = removeDuplicates(gradesInit0);
+
+
+
 var div2 = document.getElementById('initiativeLegend');
-var gradesInit = ["atelier-part", "lieu-echange", "prototype-archi", "patrimoine","reseau","med-paysage"],
-	labelsInit = ["Ateliers participatifs", "Plateforme d'échanges et d'innovations", "Prototype architectural", "Patrimoine", "Mise en réseau d'acteurs", "Médiation paysagère"];
+//var labelInit = listUniqueCat();
+ //var gradesInit = listUniquetypeCSS(typecss);
+ 
+//var gradesInit = ["atelier-part", "lieu-echange", "prototype-archi", "patrimoine","reseau","med-paysage"],
+//	labelsInit = ["Ateliers participatifs", "Plateforme d'échanges et d'innovations", "Prototype architectural", "Patrimoine", "Mise en réseau d'acteurs", "Médiation paysagère"];
 var legendeInit = '';
 for (var i = 0; i < gradesInit.length; i++)
 {
