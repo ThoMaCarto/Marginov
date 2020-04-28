@@ -18,7 +18,7 @@ L’objectif général du projet MARGINOV est d’interroger les différentes ma
 Les cartes interactives sont constituées de 5 fichiers:
 - les 2 bases de données géographiques en format geojson : territoires (périmètres des partenaires institutionnels) et initiatives(points de localisation des innovations accompagnées par Marginov),
 - Le script général de la carte : mapMarginov.js,
--le fichier CSS contenant la feuille de style,
+- le fichier CSS contenant la feuille de style,
 - Un fichier HTML contenant la mise en page et les paramètres de base de la carte.
 
 Pour créer une nouvelle carte et la paramètrer, il suffit de faire une copie du fichier cartes/map_default.html et de modifier les paramètres situés dans le script du footer. Les valeurs par défaut sont:
