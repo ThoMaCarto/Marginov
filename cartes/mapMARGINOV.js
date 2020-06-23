@@ -623,6 +623,6 @@ var controlLayers = L.control.layers(fond, overlays,
 }).addTo(map);
 
 //Création de la minimap de localisation
-var osmMiniMap = new L.TileLayer('https://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png', {minZoom: 3, maxZoom: 6, attribution: attribMARGINOV });
-var miniMap = new L.Control.MiniMap(osmMiniMap, { toggleDisplay:true, minimized: minimizeMinimap,zoomLevelOffset:-4,width:150,height:150, }).addTo(map);
+var osmMiniMap = new L.TileLayer('https://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png', {minZoom: 3, maxZoom: 9, attribution: attribMARGINOV });
+var miniMap = new L.Control.MiniMap(osmMiniMap, { toggleDisplay:true, minimized: minimizeMinimap,zoomLevelOffset:-5,width:150,height:150, }).addTo(map);
 
