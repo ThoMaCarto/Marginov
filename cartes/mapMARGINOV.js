@@ -21,8 +21,7 @@ var map = L.map('map',
 });
 //map.setView(centerMap, zoomMap); calculer automatiquement à partir du centroide de la couche territoires
 
-//Création de la minimap de localisation
-var miniMap = new L.Control.MiniMap(osmfr).addTo(map);
+
 
 //création des différents niveaux d'affichage des couches: les panes
 map.createPane('600');
@@ -622,3 +621,8 @@ var controlLayers = L.control.layers(fond, overlays,
 	collapsed: false,
 	position: 'bottomleft',
 }).addTo(map);
+
+//Création de la minimap de localisation
+var osmMiniMap = new L.TileLayer('https://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png', {minZoom: 3, maxZoom: 6, attribution: attribMARGINOV });
+var miniMap = new L.Control.MiniMap(osmMiniMap, { toggleDisplay:true, minimized: minimizeMinimap,zoomLevelFixed:4, }).addTo(map);
+
