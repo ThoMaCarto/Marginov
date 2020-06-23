@@ -45,16 +45,22 @@ var AfficherLegendeInitiatives = true;  /*afficher les panneau de légende des t
 Carte présentant les expérimentations menées dans la Haute-Lande par les chercheurs de Marginov et leurs partenaires. Cette carte permet de filtrer les expérimentations affichées en fonction des acteurs qui y participent. Chaque expérimentation est symbolisée par une épingle sur la carte. Lorsque l'on clique sur l'épingle un pop-up s'affiche et donne accès à plus d'informations (une page web spécifique). Cette carte sera intégré sous forme d'iframe au site internet de MARGINOV géré par wordpress.
 
 **Lien vers la carte :** https://thomacarto.github.io/Marginov/cartes/hautelande_map_filtre_acteurs.html
+
+
 **Lien vers la carte :** https://thomacarto.github.io/Marginov/cartes/hautelande_map-territoires.html
 
 
 ## Prototype de cartes n°2: Territoire Médoc
 **Lien vers la carte :** https://thomacarto.github.io/Marginov/cartes/medoc_map_filtre_acteurs.html
+
+
 **Lien vers la carte :** https://thomacarto.github.io/Marginov/cartes/medoc_map_territoires.html
 
 ## Prototype de cartes n°3: Territoire Haute-Gironde
 
 **Lien vers la carte :** https://thomacarto.github.io/Marginov/cartes/hautegironde_map_filtre_acteurs.html
+
+
 **Lien vers la carte :** https://thomacarto.github.io/Marginov/cartes/hautegironde_map_territoires.html
 
 
