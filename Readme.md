@@ -47,7 +47,7 @@ Carte présentant les expérimentations menées dans la Haute-Lande par les cher
 **Lien vers la carte :** https://thomacarto.github.io/Marginov/cartes/hautelande_map_filtre_acteurs.html
 
 
-**Lien vers la carte :** https://thomacarto.github.io/Marginov/cartes/hautelande_map-territoires.html
+**Lien vers la carte :** https://thomacarto.github.io/Marginov/cartes/hautelande_map-territoire.html
 
 
 ## Prototype de cartes n°2: Territoire Médoc
