@@ -12,8 +12,8 @@ Il s'organise en plusieurs parties:
 ///Paramètre généraux de la carte
 var map = L.map('map',
 {
-	maxZoom: 18,
-	minZoom: 5,
+	maxZoom: maxZoom,
+	minZoom: minZoom,
 	maxBounds: [
 		[40, -6],
 		[55, 9]
@@ -47,8 +47,8 @@ var osmfr = L.tileLayer('http://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png'
 {
 	attribution: '<b>Fond de carte</b> © <a href="http://osm.org/copyright">OpenStreetMap</a>/ODbL - rendu <a href="http://openstreetmap.fr">OSM France</a><br>' + attribMARGINOV,
 	opacity: 0.6,
-	minZoom: 0,
-	maxZoom: 19,
+	minZoom: minZoom,
+	maxZoom: maxZoom,
 	bounds: [
 		[40, -6],
 		[55, 9]
