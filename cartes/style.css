@@ -83,10 +83,11 @@
 	/*icones des initiatives*/
 	.map-label {
 	position: absolute;
-	bottom: 0;left:50%;
+	bottom: 0;/*left:50%;*/
 	display: flex;
 	flex-direction: column;
 	text-align: center;
+	 
 	
 	}
 
@@ -109,24 +110,41 @@
 	text-align: center;
 	}
 
+.iconerang1 > .map-label-content{height: 12px;
+  width:12px;left:-28%;padding: .167rem .33rem .25rem .167rem;border-width: .25rem;font-size: 10px;}
+.iconerang2 > .map-label-content{height: 20px;
+  width:20px;left: -30%;padding: .167rem .125rem 0 .125rem;border-width: .45rem;font-size: 13px;}
 
 .map-label-content {
   order: 1;
-  position: relative; left: -50%; 
+  position: relative; 
+  
+  
+  left:-28%;
+  
   background-color: #fff;
   border-radius: 5rem;
-  border-width: 3px;
+  
+  border-width: .25rem;
+  
   border-style: solid;
   border-color: #444;
-  padding: 2px 4px 3px 2px;
+  /*padding: 2px 4px 3px 2px;*/
+  padding: .167rem .33rem .25rem .167rem; /* pour taille 12*/
+  /*padding: .125rem .125rem 0 .125rem;/*pourt taille16*/
   /*padding: 3px;*/
   /*white-space: wrap;*/
   max-width:100px;
+  
   height: 12px;
   width:12px;
-  box-shadow: 6px 10px 6px 0px rgba(0, 0, 0,.5);
+  /*height: 16px;
+  width:16px;*/
+  
+  /*box-shadow: 6px 10px 6px 0px rgba(0, 0, 0,.5);*/
+  box-shadow: .5rem .83rem .5rem 0 rgba(0, 0, 0,.5);
   background-clip: border-box;
-  line-height: 10px;
+  line-height: .83rem;
   text-align:center;
   vertical-align:center;
   font-size: 10px;
@@ -136,13 +154,19 @@
   }
 
 /*pointe de flèche*/
+.iconerang1 > .map-label-arrow {border-width: 15px 6px 0 6px;margin-top:-2px;}
+.iconerang2 > .map-label-arrow {border-width: 20px 8px 0 8px;margin-top:-4px;}
+
 .map-label-arrow {
   order: 2;
-  width: 0px; height: 0px; left: 50%;
+  width: 0px; height: 0px;
   border-style: solid;
   border-color: #444 transparent transparent transparent;
+  
   border-width: 15px 6px 0 6px;
-  margin-left: -6px;
+  /*border-width: 20px 8px 0 8px;*/
+  
+  /*margin-left: -6px;*/
   margin-top:-2px;
   z-index:100;
   
@@ -232,6 +256,8 @@ font-weight: bold;
 }
   
 .mycluster{
+	display:flex;
+	
   background-clip: padding-box;
   background-color: rgba(65,105,225, .9);
   border: 3px solid rgba(65,105,225, .6);
@@ -239,7 +265,9 @@ font-weight: bold;
   font: 12px "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-weight: bold;
   border-radius: 5rem;
-  line-height:30px;
+ 
+  
   box-shadow: 6px 6px 6px 0px rgba(0, 0, 0,.5);
+  
 }
   

@@ -506,12 +506,13 @@ function displayLayersInit()
 		{
 			var markers = cluster.getAllChildMarkers();
 			var n = markers.length;
-			var e = n * 10;
+			var e = n * 6;
+			var f = e;
 			return L.divIcon(
 			{
-				html: n,
+				html: '<p style="line-height:'+f+'px;margin:auto;">'+markers.length+'</p>',
 				className: 'mycluster',
-				iconSize: L.point(30, 30)
+				iconSize: L.point(e, e)
 			});
 		},
 	});
@@ -525,7 +526,7 @@ function displayLayersInit()
 			var iconInitiative = L.divIcon(
 			{
 				iconSize: null,
-				html: '<div class="map-label ' + feature.properties.typecss + '"><div class="map-label-content" style="color:black;">[M]</div><div class="map-label-arrow"></div></div>'
+				html: '<div class="map-label ' + feature.properties.typecss + ' '+ feature.properties.rang +'"><div class="map-label-content" style="color:black;">'+feature.properties.label+'</div><div class="map-label-arrow"></div></div>'
 			});
 			//Création du marker
 			var marker = L.marker(latlng,
