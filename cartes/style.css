@@ -83,7 +83,7 @@
 	/*icones des initiatives*/
 	.map-label {
 	position: absolute;
-	bottom: 0;/*left:50%;*/
+	bottom: 0;left:50%;
 	display: flex;
 	flex-direction: column;
 	text-align: center;
@@ -111,16 +111,16 @@
 	}
 
 .iconerang1 > .map-label-content{height: 12px;
-  width:12px;left:-28%;padding: .167rem .33rem .25rem .167rem;border-width: .25rem;font-size: 10px;}
+  width:12px;left:-50%;padding: .167rem .33rem .25rem .167rem;border-width: .25rem;font-size: 10px;}
 .iconerang2 > .map-label-content{height: 20px;
-  width:20px;left: -30%;padding: .167rem .125rem 0 .125rem;border-width: .45rem;font-size: 13px;}
+  width:20px;left: -50%;padding: .167rem .125rem 0 .125rem;border-width: .45rem;font-size: 13px;}
 
 .map-label-content {
   order: 1;
   position: relative; 
   
   
-  left:-28%;
+  left:-50%;
   
   background-color: #fff;
   border-radius: 5rem;
@@ -154,19 +154,19 @@
   }
 
 /*pointe de flèche*/
-.iconerang1 > .map-label-arrow {border-width: 15px 6px 0 6px;margin-top:-2px;}
-.iconerang2 > .map-label-arrow {border-width: 20px 8px 0 8px;margin-top:-4px;}
+.iconerang1 > .map-label-arrow {border-width: 15px 6px 0 6px;margin-top:-2px;margin-left: -.4rem;}
+.iconerang2 > .map-label-arrow {border-width: 20px 8px 0 8px;margin-top:-4px;margin-left: -.5rem;}
 
 .map-label-arrow {
   order: 2;
-  width: 0px; height: 0px;
+  width: 0px; height: 0px; left:50%;
   border-style: solid;
   border-color: #444 transparent transparent transparent;
   
   border-width: 15px 6px 0 6px;
   /*border-width: 20px 8px 0 8px;*/
   
-  /*margin-left: -6px;*/
+  margin-left: -.4rem;
   margin-top:-2px;
   z-index:100;
   
