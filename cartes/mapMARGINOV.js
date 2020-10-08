@@ -158,7 +158,7 @@ function getTerritoireColor(d)
 		case "ZONE":
 			return " #2874a6 ";
 		case "CD":
-			return "#4ea547";
+			return "#79c6c0";
 			
 		default:
 			return "red";
