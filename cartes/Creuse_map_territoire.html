@@ -26,8 +26,10 @@
    <link rel="stylesheet" type="text/css"  href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
    <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
    
+   
    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js"></script>
    <link rel="stylesheet" type="text/css"  href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"/>
+   
 
    
     <script src="https://unpkg.com/leaflet.pattern@0.1.0/dist/leaflet.pattern.js"></script>
@@ -36,6 +38,7 @@
 	<script src="territoires.json"></script>
 	<script src="initiatives.json"></script>
 	<script src="lieux_cle.json"></script>
+	
 	
    
    
@@ -65,17 +68,17 @@
 /*Saisir ici tous les paramètres de la carte en respectant bien la syntaxe*/
 var minZoom = 5;//zoom minimum par défaut mettre 5
 var maxZoom = 18; //zoom maximum par défaut mettre 18
-var zoomMap = 16; /* échelle régionale = 8, échelle local = 16*/
-var minimizeMinimap = true; //Affichage ou non de la minicarte de situation en bas à droite de la carte
-var centerMap = [45.114515459727635,-0.730863712510642];/*[44.4122, -0.5603];coordonnées du centre de la carte (ex. Moustey = [44.35622,-0.76433]) si  "auto" le centre de la carte sera le centroide de la couche territoires*/
-var filtreMap = ["Médoc"]; /*filtrage des éléments affiché: tous les élements ou seulement un territoire laboratoire: ex["Medoc","Creuse","Haute-Lande"]*/
-var typeFond = "couleurs";/* apparence du fond de carte : "gris" ou "couleurs"*/
-var afficherTerritoires = false; /*afficher les périmètres administratifs ou non*/
+var zoomMap = 8; /* échelle régionale = 8, échelle local = 16*/
+var minimizeMinimap = false; //Affichage ou non de la minicarte de situation en bas à droite de la carte
+var centerMap = "auto";/*[44.4122, -0.5603];coordonnées du centre de la carte (ex. Moustey = [44.35622,-0.76433]) si  "auto" le centre de la carte sera le centroide de la couche territoires*/
+var filtreMap = ["Creuse"]; /*filtrage des éléments affiché: tous les élements ou seulement un territoire laboratoire: ex["Medoc","Creuse","Haute-Lande"]*/
+var typeFond = "gris";/* apparence du fond de carte : "gris" ou "couleurs"*/
+var afficherTerritoires = true; /*afficher les périmètres administratifs ou non*/
 var afficherLieuxcles = true; /* afficher les lieux clés*/
-var afficherInitiatives = true; /*afficher ou non les puces des initiatives*/
-var afficherPanneau = true; /*afficher le panneau d'information latéral ou non. Si false, alors les deux paramètres suivants seront invisibles.*/
+var afficherInitiatives = false; /*afficher ou non les puces des initiatives*/
+var afficherPanneau = false; /*afficher le panneau d'information latéral ou non. Si false, alors les deux paramètres suivants seront invisibles.*/
 var afficherFiltresActeurs = false; /*afficher le panneau permettant de filtrer les initiatives par types d'acteurs*/
-var AfficherLegendeInitiatives = true; /*afficher les panneau de légende des types d'initiatives*/
+var AfficherLegendeInitiatives = false; /*afficher les panneau de légende des types d'initiatives*/
 
 
 </script>

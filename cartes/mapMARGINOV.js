@@ -110,6 +110,13 @@ function displayTerritories(d){
 	
 }
 
+//Afficher la couches des lieux clés
+function displayLieuxcles(d){
+	if(d === true) {return [map.addLayer(iconclustersLieuxCles),map.addControl(info),];}
+	else{return [map.removeLayer(iconclustersLieuxCles),map.removeControl(info),];}
+	
+}
+
 
 
 //Afficher le panneau latéral
@@ -150,9 +157,11 @@ function getTerritoireColor(d)
 			return "#f0c53e";
 		case "ZONE":
 			return " #2874a6 ";
+		case "CD":
+			return "#4ea547";
 			
 		default:
-			return "grey";
+			return "red";
 	}
 }
 
@@ -172,6 +181,8 @@ function getTerritoireWeight(d)
 			return 3;
 		case "ZONE":
 			return 3;
+		case "CD":
+			return 1;
 		default:
 			return 6;
 	}
@@ -193,6 +204,8 @@ function getTerritoirePane(d)
 			return "610";
 		case "ZONE":
 			return "620";
+		case "CD":
+			return "610";
 		default:
 			return "630";
 	}
@@ -215,7 +228,7 @@ function getTerritoireOpacity(d)
 		case "ZONE":
 			return 0;
 		default:
-			return true;
+			return 0;
 	}
 }
 
@@ -297,6 +310,56 @@ var coucheTerritoires = L.geoJson(territoires,
 	onEachFeature: onEachTerritoires,
 });
 
+/*Affichage de la couche des lieux clés */
+
+var couchelieuxcles = L.geoJson(lieuxCles,
+{ //la fonction L.geoJson crée une couche layer à partir de donnée au format geojson
+	filter: filterLabo,
+	pointToLayer: function(feature, latlng)
+		{
+			// Création de l'icone initiatives
+			var iconInitiative = L.divIcon(
+			{
+				iconSize: null,
+				html: '<div class="map-label ' + feature.properties.label + ' '+ feature.properties.rang +'"><div class="map-label-content" style="color:black;">'+feature.properties.label+'</div><div class="map-label-arrow"></div></div>'
+			});
+			//Création du marker
+			var marker = L.marker(latlng,
+			{
+				icon: iconInitiative,
+				pane: "635"
+			});
+			//caractéristiques des popup
+			marker.bindPopup('<h4>'+ feature.properties.type +' : ' + feature.properties.nom_site + '</h4><p></p><b>Adresse </b>: '+feature.properties.adresse +'<br/>'+feature.properties.commune+' ('+feature.properties.cp+')<p><a href="' + feature.properties.web + '" target="_parent" >'+feature.properties.web+'</a></p>');
+			//Affichage des marqueurs
+			return marker;
+		},
+});
+
+var iconclustersLieuxCles = L.markerClusterGroup(
+	{
+		maxClusterRadius: 30,
+		singleMarkerMode: false,
+		zoomToBoundsOnClick: true,
+		showCoverageOnHover: true,
+		spiderfyOnMaxZoom: true,
+		clusterPane: '630',
+		iconCreateFunction: function(cluster)
+		{
+			var markers = cluster.getAllChildMarkers();
+			var n = markers.length;
+			var e = n * 6;
+			var f = e;
+			return L.divIcon(
+			{
+				html: '<p style="line-height:'+f+'px;margin:auto;">'+markers.length+'</p>',
+				className: 'mycluster',
+				iconSize: L.point(e, e)
+			});
+		},
+	});
+
+iconclustersLieuxCles.addLayer(couchelieuxcles);
 
 ///paramètrage de la vue dela carte
 var centerMaptest = [coucheTerritoires.getBounds().getCenter().lat,coucheTerritoires.getBounds().getCenter().lng];
@@ -308,6 +371,7 @@ map.setView(setMapCenter (centerMap), zoomMap);
 
 
 
+displayLieuxcles(afficherLieuxcles)//paramètré dans le fichier HTML
 displayTerritories(afficherTerritoires)//paramètré dans le fichier HTML
 
 /*Affichage du control Info en fonction des couches sélectionnées
@@ -601,6 +665,7 @@ function updateInitiativeLayer()
 	map.on('overlayremove', displayInfo);
 	map.addLayer(designFond (typeFond)); //paramètré dans le fichier HTML
 	displayTerritories(afficherTerritoires)//paramètré dans le fichier HTML
+	dispalyLieuxcles(afficherLieuxcles)//paramètré dans le fichier HTML
 	displayInitiatives(afficherInitiatives)//paramètré dans le fichier HTML
 	
 };

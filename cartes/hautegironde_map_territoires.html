@@ -35,7 +35,7 @@
 	<!-- chargement des bases de données géographiques en geojson-->
 	<script src="territoires.json"></script>
 	<script src="initiatives.json"></script>
-	
+	<script src="lieux_cle.json"></script>
 	
    
    
@@ -71,6 +71,7 @@ var centerMap = "auto";/*[44.4122, -0.5603];coordonnées du centre de la carte (
 var filtreMap = ["Haute Gironde"]; /*filtrage des éléments affiché: tous les élements ou seulement un territoire laboratoire: ex["Medoc","Creuse","Haute-Lande"]*/
 var typeFond = "gris";/* apparence du fond de carte : "gris" ou "couleurs"*/
 var afficherTerritoires = true; /*afficher les périmètres administratifs ou non*/
+var afficherLieuxcles = true; /* afficher les lieux clés*/
 var afficherInitiatives = false; /*afficher ou non les puces des initiatives*/
 var afficherPanneau = false; /*afficher le panneau d'information latéral ou non. Si false, alors les deux paramètres suivants seront invisibles.*/
 var afficherFiltresActeurs = false; /*afficher le panneau permettant de filtrer les initiatives par types d'acteurs*/
