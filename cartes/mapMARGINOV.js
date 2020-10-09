@@ -541,7 +541,7 @@ var div2 = document.getElementById('initiativeLegend');
  //var gradesInit = listUniquetypeCSS(typecss);
  
 //var gradesInit = ["atelier-part", "lieu-echange", "prototype-archi", "patrimoine","reseau","med-paysage"],
-//	labelsInit = ["Ateliers participatifs", "Plateforme d'échanges et d'innovations", "Prototype architectural", "Patrimoine", "Mise en réseau d'acteurs", "Médiation paysagère"];
+//	labelsInit = ["Ateliers participatifs", "Dispositif multi-acteur d'accompagnement des innovations", "Prototype architectural", "Patrimoine", "Mise en réseau d'acteurs", "Médiation paysagère"];
 var legendeInit = '';
 for (var i = 0; i < gradesInit.length; i++)
 {
