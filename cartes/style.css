@@ -249,30 +249,99 @@
 }  
 
 
-/*class en fonction de typecss poiour les lieux clés*/
-.TL > .map-label-content{
-  border-color: #d85398;
-  color: #d85398;
-}
-.TL > .map-label-arrow{
-  border-top-color: #d85398;
-  /*color: #d85398;*/
-  }
-.TL-color-legend{
-    color: #d85398;
-}
-
-.LIP > .map-label-content{
+/*class en fonction de typecss pour les lieux clés*/
+/*pour le conseil dep*/
+.LIP > .map-label-content,.DPP > .map-label-content{
   border-color: #ee600a;
   color: #ee600a;
 }
-.LIP > .map-label-arrow{
+.LIP > .map-label-arrow,.DPP > .map-label-arrow{
   border-top-color: #ee600a;
   /*color: #ee600a;*/
   }
-.LIP-color-legend{
+
+/*pour le pays de combraille en marche*/ 
+.LIP-color-legend,
+.DPP-color-legend{
     color: #ee600a;
 }
+
+.L > .map-label-content,.alur > .map-label-content{
+  border-color: #996d00;
+  color: #996d00;
+}
+.L > .map-label-arrow,.alur > .map-label-arrow{
+  border-top-color: #996d00;
+  /*color: #996d00;*/
+  }
+  
+.L-color-legend,
+.alur-color-legend{
+    color: #996d00;
+}
+
+/*pour les lieux hybrides*/
+.TL > .map-label-content{
+  border-color: #ca0151;
+  color: #ca0151;
+}
+.TL > .map-label-arrow{
+  border-top-color: #ca0151;
+  /*color: #ca0151;*/
+  }
+.TL-color-legend{
+    color: #ca0151;
+}
+
+.B > .map-label-content{
+  border-color: #d6df22;
+  color: #d6df22;
+}
+.B > .map-label-arrow{
+  border-top-color: #d6df22;
+  /*color: #d6df22;*/
+  }
+.B-color-legend{
+    color: #d6df22;
+}
+
+.R > .map-label-content{
+  border-color: #608b87;
+  color: #608b87;
+}
+.R > .map-label-arrow{
+  border-top-color: #608b87;
+  /*color: #608b87;*/
+  }
+.R-color-legend{
+    color: #608b87;
+}
+
+.PE > .map-label-content{
+  border-color: #29235c;
+  color: #29235c;
+}
+.PE > .map-label-arrow{
+  border-top-color: #29235c;
+  /*color: #29235c;*/
+  }
+.PE-color-legend{
+    color: #29235c;
+}
+
+.LH > .map-label-content{
+  border-color: #ee600a;
+  color: #ee600a;
+}
+.LH > .map-label-arrow{
+  border-top-color: #ee600a;
+  /*color: #ee600a;*/
+  }
+.LH-color-legend{
+    color: #ee600a;
+}
+
+
   
 .legend-init{
 margin:6px 0;
