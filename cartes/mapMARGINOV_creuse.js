@@ -437,7 +437,7 @@ for (var i = 0; i < gradeslieuxcles.length; i++)
 div2.innerHTML = '<h4>Hyper-ruralité</h4>'
 +'<div style="display:flex;flex-direction:row;max-width:100%;margin:0 0 10% 0;">'
 +'<div style="height:20px;width:30px;background-color:rgb(139,69,19,0.2)" ></div>'
-+'<div  style="margin : auto auto auto 6px;"><b>Les bassins de vie <br/>hyper-ruraux<br/>(<a href="https://hal.archives-ouvertes.fr/hal-00911232">Hilal et al., 2011</a>)</b></div>'
++'<div  style="margin : auto auto auto 6px;"><b>Les bassins de vie <br/>hyper-ruraux<br/>(<a href="https://hal.archives-ouvertes.fr/hal-00911232">Hilal et al., 2011</a> ;<br/><a href="http://www.ladocumentationfrancaise.fr/var/storage/rapports-publics/144000475.pdf">Bertrand, 2014</a>)</b></div>'
 +'</div>'
 +'<h4>Type d\'innovations</h4>'
 +'<div style="display:flex;flex-direction:row;">'
@@ -464,7 +464,7 @@ var coucheHyperrural = L.geoJson(hyperrural,
 			color: 'saddlebrown',
 			fillOpacity: 0.2,
 			fill: true,
-			attribution: 'Bassins de vie Hyper-ruraux: <a href="https://hal.archives-ouvertes.fr/hal-00911232">Hilal et al., 2011</a>',
+			
 		};
 	},
 	
