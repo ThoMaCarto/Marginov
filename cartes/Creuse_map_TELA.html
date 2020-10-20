@@ -79,8 +79,8 @@
 /*Saisir ici tous les paramètres de la carte en respectant bien la syntaxe*/
 var minZoom = 5;//zoom minimum par défaut mettre 5
 var maxZoom = 18; //zoom maximum par défaut mettre 18
-var zoomMap = 8; /* échelle régionale = 8, échelle local = 16*/
-var minimizeMinimap = false; //Affichage ou non de la minicarte de situation en bas à droite de la carte
+var zoomMap = 9; /* échelle régionale = 8, échelle local = 16*/
+var minimizeMinimap = true; //Affichage ou non de la minicarte de situation en bas à droite de la carte
 var centerMap = "auto";/*[44.4122, -0.5603];coordonnées du centre de la carte (ex. Moustey = [44.35622,-0.76433]) si  "auto" le centre de la carte sera le centroide de la couche territoires*/
 var filtreMap = ["Creuse","Creuse3"]; /*filtrage des éléments affiché: tous les élements ou seulement un territoire laboratoire: ex["Medoc","Creuse","Haute-Lande"]*/
 var typeFond = "gris";/* apparence du fond de carte : "gris" ou "couleurs"*/
@@ -89,7 +89,7 @@ var afficherLieuxcles = true; /* afficher les lieux clés*/
 var filtrelieuxcles = ["TELA"] /*Filtre les lieux à afficher :"CEMleader", "CEMetudes", "CEMtravaux","TiersLieux","TELA","CD"*/
 var afficherInitiatives = false; /*afficher ou non les puces des initiatives*/
 var afficherHyperrural = true; /*afficher la couche des bassins de vie hyper-ruraux*/
-var afficherPanneau = true; /*afficher le panneau d'information latéral ou non. Si false, alors les deux paramètres suivants seront invisibles.*/
+var afficherPanneau = false; /*afficher le panneau d'information latéral ou non. Si false, alors les deux paramètres suivants seront invisibles.*/
 var afficherFiltresActeurs = false; /*afficher le panneau permettant de filtrer les initiatives par types d'acteurs*/
 var AfficherLegendeInitiatives = false; /*afficher les panneau de légende des types d'initiatives*/
 var AfficherLegendeLieuxcles = true; /*afficher les panneau de légende des Lieux clés*/

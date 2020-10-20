@@ -131,8 +131,8 @@ function displayLieuxcles(d,e){
 
 //Afficher la couche des bassins de vie hyper-ruraux
 function displayHyperrural(d){
-	if(d === true) {return [map.addLayer(coucheHyperrural),map.addControl(info),];}
-	else{return [map.removeLayer(coucheHyperrural),map.removeControl(info),];}
+	if(d === true) {return [map.addLayer(coucheHyperrural),map.addControl(hyperruralLegend),];}
+	else{return [map.removeLayer(coucheHyperrural),map.removeControl(hyperruralLegend),];}
 	
 }
 
@@ -312,7 +312,23 @@ info.onAdd = function(map)
 info.update = function(props)
 {
 	this._div.innerHTML = '<h4>Informations : </h4>' + (props ? '<b style="color: ' + getTerritoireColor(props.type) + '">' + props.nom_site + '</b>' : 'Passer le curseur sur un territoire');
-};;
+};
+
+//Création d'un panneau de légende pour les bassins de vie hyper-ruraux
+var hyperruralLegend = L.control({position:"topright"});
+hyperruralLegend.onAdd = function(map)
+{
+	var div = L.DomUtil.create("div", 'info');
+	div.innerHTML = '<div style="display:flex;flex-direction:row;max-width:100%;margin:0 0 10% 0;">'
++'<div style="height:20px;width:30px;background-color:rgb(139,69,19,0.2)" ></div>'
++'<div  style="margin : auto auto auto 6px;">Les bassins de vie <br/>hyper-ruraux<br/>(<a href="https://hal.archives-ouvertes.fr/hal-00911232">Hilal et al., 2011</a> ;<br/><a href="http://www.ladocumentationfrancaise.fr/var/storage/rapports-publics/144000475.pdf">Bertrand, 2014</a>)</div>'
++'</div>';
+	return div;
+}
+//hyperruralLegend.addTo(map);
+
+
+
 
 /*Affichage de la couche des périmètres administratifs */
 
@@ -434,12 +450,7 @@ for (var i = 0; i < gradeslieuxcles.length; i++)
 	legendeLieuxCles += '<div class="legend-init '+ gradeslieuxcles[i] +'-color-legend">' + labellieuxcles[i] + '</div>'
 }
 
-div2.innerHTML = '<h4>Hyper-ruralité</h4>'
-+'<div style="display:flex;flex-direction:row;max-width:100%;margin:0 0 10% 0;">'
-+'<div style="height:20px;width:30px;background-color:rgb(139,69,19,0.2)" ></div>'
-+'<div  style="margin : auto auto auto 6px;"><b>Les bassins de vie <br/>hyper-ruraux<br/>(<a href="https://hal.archives-ouvertes.fr/hal-00911232">Hilal et al., 2011</a> ;<br/><a href="http://www.ladocumentationfrancaise.fr/var/storage/rapports-publics/144000475.pdf">Bertrand, 2014</a>)</b></div>'
-+'</div>'
-+'<h4>Type d\'innovations</h4>'
+div2.innerHTML = '<h4>Type d\'innovations</h4>'
 +'<div style="display:flex;flex-direction:row;">'
 +'<div style="display:flex;max-width:100%;"><div class="map-label" style="position:relative;"><div class="map-label-content">[M]</div><div class="map-label-arrow" ></div></div></div>'
 +'<div style="margin : auto auto auto 6px;"><b>Innovations</b></div>'
@@ -484,7 +495,7 @@ displayLieuxcles(afficherLieuxcles,afficherClustersLieuxCles)//paramètré dans 
 displayTerritories(afficherTerritoires)//paramètré dans le fichier HTML
 displayHyperrural(afficherHyperrural)//paramètre dans le fichier HTML
 
-/*Affichage du control Info en fonction des couches sélectionnées
+/*Affichage des control Info en fonction des couches sélectionnées
 le control ne s'affiche que si la couche est affichée*/
 
 function displayInfo()
@@ -500,6 +511,22 @@ function displayInfo()
 }
 map.on('overlayadd', displayInfo);
 map.on('overlayremove', displayInfo);
+
+/*le hyperruralLegend ne s'affiche que si la couche est affichée*/
+
+function displayHRLegend()
+{
+	if (map.hasLayer(coucheHyperrural))
+	{
+		hyperruralLegend.addTo(this);
+	}
+	else
+	{
+		hyperruralLegend.remove(this);
+	}
+}
+map.on('overlayadd', displayHRLegend);
+map.on('overlayremove', displayHRLegend);
 
 
 
@@ -777,6 +804,8 @@ function updateInitiativeLayer()
 	displayTerritories(afficherTerritoires)//paramètré dans le fichier HTML
 	dispalyLieuxcles(afficherLieuxcles)//paramètré dans le fichier HTML
 	displayInitiatives(afficherInitiatives)//paramètré dans le fichier HTML
+	displayHyperrural(afficherHyperrural)//paramètré dans le fichier HTML
+	
 	
 };
 
@@ -790,6 +819,7 @@ var fond = {
 };
 var overlays = {
 	"Périmètres administratifs": coucheTerritoires,
+	"bassins de vie hyper-ruraux": coucheHyperrural,
 };
 //var overlays = {"Innovations": iconclustersInit};
 var controlLayers = L.control.layers(fond, overlays,
