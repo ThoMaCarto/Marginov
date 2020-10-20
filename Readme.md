@@ -80,7 +80,7 @@ Carte présentant les expérimentations menées dans la Haute-Lande par les cher
 **Lien vers la carte des autres tiers lieux et lieux hybrides de Creuse:** https://thomacarto.github.io/Marginov/cartes/Creuse_map_lieuxhybrides.html
 
 
-**Lien vers la carte de base :** https://thomacarto.github.io/Marginov/cartes/Creuse_map_territoire.html
+**Lien vers la carte de test :** https://thomacarto.github.io/Marginov/cartes/Creuse_map_territoire.html
 
 
 
