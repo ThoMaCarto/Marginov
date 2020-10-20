@@ -80,7 +80,7 @@ Carte présentant les expérimentations menées dans la Haute-Lande par les cher
 **Lien vers la carte des études issues des ALUR du Pays de Combraille en Marche :** https://thomacarto.github.io/Marginov/cartes/Creuse_map_PaysCEM_ALURetudes.html
 
 
-**Lien vers la carte des travaux issues des ALUR du Pays de Combraille en Marche :** https://thomacarto.github.io/Marginov/cartes/Creuse_map_PaysCEM_ALURtravaux.html
+**Lien vers la carte des travaux issus des ALUR du Pays de Combraille en Marche :** https://thomacarto.github.io/Marginov/cartes/Creuse_map_PaysCEM_ALURtravaux.html
 
 
 **Lien vers la carte des tiers lieux du réseau TELA :** https://thomacarto.github.io/Marginov/cartes/Creuse_map_TELA.html
