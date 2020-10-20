@@ -68,7 +68,19 @@ Carte présentant les expérimentations menées dans la Haute-Lande par les cher
 
 ## Prototypes de cartes n°4 : Territoire Creuse
 
-**Lien vers la carte :** https://thomacarto.github.io/Marginov/cartes/Creuse_map_territoire.html
+**Lien vers la carte des innovations du département :** https://thomacarto.github.io/Marginov/cartes/Creuse_map_CDepartt.html
+
+
+**Lien vers la carte des innovations du Pays de Combraille en Marche :** https://thomacarto.github.io/Marginov/cartes/Creuse_map_PaysCEM.html
+
+
+**Lien vers la carte des tiers lieux du réseau TELA :** https://thomacarto.github.io/Marginov/cartes/Creuse_map_TELA.html
+
+
+**Lien vers la carte des autres tiers lieux et lieux hybrides de Creuse:** https://thomacarto.github.io/Marginov/cartes/Creuse_map_lieuxhybrides.html
+
+
+**Lien vers la carte de base :** https://thomacarto.github.io/Marginov/cartes/Creuse_map_territoire.html
 
 
 
