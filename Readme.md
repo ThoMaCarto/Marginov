@@ -71,7 +71,16 @@ Carte présentant les expérimentations menées dans la Haute-Lande par les cher
 **Lien vers la carte des innovations du département :** https://thomacarto.github.io/Marginov/cartes/Creuse_map_CDepartt.html
 
 
-**Lien vers la carte des innovations du Pays de Combraille en Marche :** https://thomacarto.github.io/Marginov/cartes/Creuse_map_PaysCEM.html
+**Lien vers la carte de toutes les opérations du Pays de Combraille en Marche :** https://thomacarto.github.io/Marginov/cartes/Creuse_map_PaysCEM.html
+
+
+**Lien vers la carte des opérations LEADER+ du Pays de Combraille en Marche :** https://thomacarto.github.io/Marginov/cartes/Creuse_map_PaysCEM_leader.html
+
+
+**Lien vers la carte des études issues des ALUR du Pays de Combraille en Marche :** https://thomacarto.github.io/Marginov/cartes/Creuse_map_PaysCEM_ALURetudes.html
+
+
+**Lien vers la carte des travaux issues des ALUR du Pays de Combraille en Marche :** https://thomacarto.github.io/Marginov/cartes/Creuse_map_PaysCEM_ALURtravaux.html
 
 
 **Lien vers la carte des tiers lieux du réseau TELA :** https://thomacarto.github.io/Marginov/cartes/Creuse_map_TELA.html
