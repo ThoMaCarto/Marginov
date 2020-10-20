@@ -57,13 +57,22 @@
 		<div id="actors" style="display: none;"></div>
 		<div id ="initiativeLegend" style="display: none;"></div>
 		<div id ="initiativeLieuxCles" style="display: none;"></div>
+		
 	</div>
+		
+
 	
 	
 	
 </section>
 
 <footer>
+<div class="telechargement">
+	<p>Télécharger les différentes couches de données de la carte (format .geoJSON) :</p>
+	<button id="test1" class="button" onClick="saveToFile(couchelieuxcles.toGeoJSON(), 'innovations_creuse_marginov')">Innovations</button><br/>
+	<button id="test2" class="button" onClick="saveToFile(coucheTerritoires.toGeoJSON(), 'territoires_creuse_marginov')">Territoires</button>
+	<button id="test3" class="button" onClick="saveToFile(coucheHyperrural.toGeoJSON(), 'bv_hyperural_marginov')">Bassins de vie hyper-ruraux</button>
+</div>
 
 <script>
 /*Paramètres de la carte*/
@@ -77,7 +86,7 @@ var filtreMap = ["Creuse","Creuse3"]; /*filtrage des éléments affiché: tous l
 var typeFond = "gris";/* apparence du fond de carte : "gris" ou "couleurs"*/
 var afficherTerritoires = true; /*afficher les périmètres administratifs ou non*/
 var afficherLieuxcles = true; /* afficher les lieux clés*/
-var filtrelieuxcles = ["TELA"] /*Filtre les lieux à afficher :"CEMleader", "CEMetudes", "CEMtravaux","TiersLieux","TELA","CD"*/
+var filtrelieuxcles = ["TiersLieux"] /*Filtre les lieux à afficher :"CEMleader", "CEMetudes", "CEMtravaux","TiersLieux","TELA","CD"*/
 var afficherInitiatives = false; /*afficher ou non les puces des initiatives*/
 var afficherHyperrural = true; /*afficher la couche des bassins de vie hyper-ruraux*/
 var afficherPanneau = true; /*afficher le panneau d'information latéral ou non. Si false, alors les deux paramètres suivants seront invisibles.*/
@@ -91,7 +100,17 @@ var afficherClustersLieuxCles = false; /* afficher les POI sous forme d'agglomé
 </script>
 
 <script src="mapMARGINOV_creuse.js"></script>
+ 
+ <script src="./FileSaver.min.js"></script>
+ <script>
+  function saveToFile(content, filename) {
+      var file = filename + '.geojson';
+      saveAs(new File([JSON.stringify(content)], file, {
+        type: "text/plain;charset=utf-8"
+      }), file);
+    };
 	
+ </script>	
 
 </footer>
 
