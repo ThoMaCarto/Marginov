@@ -824,7 +824,7 @@ var overlays = {
 //var overlays = {"Innovations": iconclustersInit};
 var controlLayers = L.control.layers(fond, overlays,
 {
-	collapsed: false,
+	collapsed: true,
 	position: 'bottomleft',
 }).addTo(map);
 
