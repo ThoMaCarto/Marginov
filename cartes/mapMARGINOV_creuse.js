@@ -168,7 +168,7 @@ function getTerritoireColor(d)
 	switch (d)
 	{
 		case "Commune":
-			return "DarkViolet";
+			return "#3633ff";
 		case "EPCI":
 			return "#5f72ca";
 		case "PNR":
@@ -434,12 +434,18 @@ for (var i = 0; i < gradeslieuxcles.length; i++)
 	legendeLieuxCles += '<div class="legend-init '+ gradeslieuxcles[i] +'-color-legend">' + labellieuxcles[i] + '</div>'
 }
 
-div2.innerHTML ='<h4>Type d\'innovations</h4>'
+div2.innerHTML = '<h4>Hyper-ruralité</4>'
++'<div style="display:flex;flex-direction:row;max-width:100%;">'
++'<div style="height:20px;width:30px;background-color:rgb(139,69,19,0.2)" ></div>'
++'<div  style="margin : auto auto auto 6px;"><b>Bassins de vie Hyper-ruraux: <br/><a href="https://hal.archives-ouvertes.fr/hal-00911232">Hilal et al., 2011</a></b></div>'
++'</div>'
++'<h4>Type d\'innovations</h4>'
 +'<div style="display:flex;flex-direction:row;">'
 +'<div style="display:flex;max-width:100%;"><div class="map-label" style="position:relative;"><div class="map-label-content">[M]</div><div class="map-label-arrow" ></div></div></div>'
 +'<div style="margin : auto auto auto 6px;"><b>Innovations</b></div>'
 +'</div>'
 +'<div style="max-width:200px;">'+ legendeLieuxCles + '</div>';
+
 
 
 

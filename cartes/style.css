@@ -251,34 +251,48 @@
 
 /*class en fonction de typecss pour les lieux clés*/
 /*pour le conseil dep*/
-.LIP > .map-label-content,.DPP > .map-label-content{
+.LIP > .map-label-content{
   border-color: #ee600a;
   color: #ee600a;
 }
-.LIP > .map-label-arrow,.DPP > .map-label-arrow{
+.LIP > .map-label-arrow{
   border-top-color: #ee600a;
   /*color: #ee600a;*/
   }
 
 /*pour le pays de combraille en marche*/ 
-.LIP-color-legend,
-.DPP-color-legend{
+.LIP-color-legend{
     color: #ee600a;
 }
 
-.L > .map-label-content,.alur > .map-label-content{
+.L > .map-label-content,.DPP > .map-label-content{
   border-color: #996d00;
   color: #996d00;
 }
-.L > .map-label-arrow,.alur > .map-label-arrow{
+.L > .map-label-arrow,.DPP > .map-label-arrow{
   border-top-color: #996d00;
   /*color: #996d00;*/
   }
   
 .L-color-legend,
-.alur-color-legend{
+.DPP-color-legend{
     color: #996d00;
 }
+
+.alur > .map-label-content{
+  border-color: #4ea547;
+  color: #4ea547;
+}
+
+.alur > .map-label-arrow{
+  border-top-color: #4ea547;
+  /*color: #4ea547;*/
+  }
+  
+ .alur-color-legend{
+    color: #4ea547;
+}
+
 
 /*pour les lieux hybrides*/
 .TL > .map-label-content{
