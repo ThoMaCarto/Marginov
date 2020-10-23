@@ -221,40 +221,40 @@ button:hover{
 }
 
 
-.atelier-part > .map-label-content {
+.atelier-pedago > .map-label-content {
   border-color: #999900;
   color: #999900;
 }
-.atelier-part > .map-label-arrow {
+.atelier-pedago > .map-label-arrow {
   border-top-color: #999900;
   /*color: #999900;*/
 }
-.atelier-part-color-legend{
+.atelier-pedago-color-legend{
     color: #999900;
 }
 
-.prototype-archi > .map-label-content {
+.prototype > .map-label-content {
   border-color: #ff9900;
   color:#ff9900;
 }
-.prototype-archi > .map-label-arrow {
+.prototype > .map-label-arrow {
   border-top-color: #ff9900;
   /*color:#ff9900;*/
 }
-.prototype-archi-color-legend{
+.prototype-color-legend{
     color: #ff9900;
 }
 
 
-.patrimoine> .map-label-content{
+.ressource> .map-label-content{
 	border-color: #873600;
   color:#873600;
 }
-.patrimoine> .map-label-arrow{
+.ressource> .map-label-arrow{
 	border-top-color: #873600;
   /*color:#873600;*/
 }
-.patrimoine-color-legend{
+.ressource-color-legend{
     color: #873600;
 }
 
@@ -270,15 +270,15 @@ button:hover{
     color: #008b99;
 }
   
-.med-paysage>.map-label-content{
+.identification>.map-label-content{
   border-color:  #996d00;
   color:  #996d00;
 }
-.med-paysage> .map-label-arrow {
+.identification> .map-label-arrow {
   border-top-color: #996d00;
   /*color: #996d00;*/
   }
-.med-paysage-color-legend{
+.identification-color-legend{
     color: #996d00;
 }  
 
