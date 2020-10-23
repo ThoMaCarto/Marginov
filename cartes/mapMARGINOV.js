@@ -51,7 +51,7 @@ var osmfr = L.tileLayer('http://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png'
 	maxZoom: maxZoom,
 	bounds: [
 		[40, -6],
-		[55, 9]
+		[55, 12]
 	],
 });
 
