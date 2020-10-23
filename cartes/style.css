@@ -247,27 +247,27 @@ button:hover{
 
 
 .ressource> .map-label-content{
-	border-color: #873600;
-  color:#873600;
+	border-color: #008b99;
+  color:#008b99;
 }
 .ressource> .map-label-arrow{
-	border-top-color: #873600;
-  /*color:#873600;*/
+	border-top-color: #008b99;
+  /*color:#008b99;*/
 }
 .ressource-color-legend{
-    color: #873600;
+    color: #008b99;
 }
 
 .reseau>.map-label-content{
-  border-color: #008b99;
-  color: #008b99;
+  border-color: #873600;
+  color: #873600;
 }
 .reseau> .map-label-arrow {
-  border-top-color: #008b99;
-  /*color: #008b99;*/
+  border-top-color: #873600;
+  /*color: #873600;*/
   }
 .reseau-color-legend{
-    color: #008b99;
+    color: #873600;
 }
   
 .identification>.map-label-content{
