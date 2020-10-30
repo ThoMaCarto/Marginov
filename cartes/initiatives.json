@@ -20,5 +20,7 @@ var initiatives = {
 
 { "type": "Feature", "properties": { "name": "Laboratoire d'innovation de politiques publiques du Conseil Départemental", "cat": "Dispositif structuré d'échanges & d'innovations", "typecss": "lieu-echange", "labo": "Creuse","label":"[M]","rang":"iconerang1", "actors": ["Conseil départemental","CNRS","Association(s)","Entreprise(s) locale(s)"], "illustre": "", "link": "#" }, "geometry": { "type": "Point", "coordinates": [ 1.88025, 46.173155 ] } },
 { "type": "Feature", "properties": { "name": "Chercheur embarqué pour identifier et accompagner les innovations", "cat": "Identification des innovations du territoire", "typecss": "identification", "labo": "Creuse","label":"[M]","rang":"iconerang1", "actors": ["Conseil départemental","CNRS","Association(s)","Entreprise(s) locale(s)"], "illustre": "", "link": "#" }, "geometry": { "type": "Point", "coordinates": [  2.0905405282974243,46.07001515332049] } },
+
+{ "type": "Feature", "properties": { "name": "Atelier pédagogique Paysages-Acteurs-Territoire en Haute Gironde", "cat": "Atelier Pédagogique", "typecss": "atelier-pedago", "labo": "Haute Gironde","label":"[M]","rang":"iconerang1", "actors": ["ENSAP-Bx","Communauté de Communes","CREN","CNRS"], "illustre": "", "link": "https://www.marginov.cnrs.fr/ateliers-pedagogiques-paysages-acteurs-territoire-en-haute-gironde/" }, "geometry": { "type": "Point", "coordinates": [ -0.6351470,45.268604] } },
 ]
 }
