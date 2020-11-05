@@ -321,7 +321,7 @@ hyperruralLegend.onAdd = function(map)
 	var div = L.DomUtil.create("div", 'info');
 	div.innerHTML = '<div style="display:flex;flex-direction:row;max-width:100%;margin:0 0 10% 0;">'
 +'<div style="height:20px;width:30px;background-color:rgb(139,69,19,0.2)" ></div>'
-+'<div  style="margin : auto auto auto 6px;">Les bassins de vie <br/>hyper-ruraux<br/>(<a href="https://hal.archives-ouvertes.fr/hal-00911232"  target="_blank">Hilal et al., 2011</a> ;<br/><a href="http://www.ladocumentationfrancaise.fr/var/storage/rapports-publics/144000475.pdf">Bertrand, 2014</a>)</div>'
++'<div  style="margin : auto auto auto 6px;">Les bassins de vie <br/>hyper-ruraux<br/>(<a href="https://hal.archives-ouvertes.fr/hal-00911232"  target="_blank">Hilal et al., 2011</a> ;<br/><a href="http://www.ladocumentationfrancaise.fr/var/storage/rapports-publics/144000475.pdf"  target="_blank">Bertrand, 2014</a>)</div>'
 +'</div>';
 	return div;
 }
