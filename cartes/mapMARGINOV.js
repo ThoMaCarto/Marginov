@@ -151,6 +151,8 @@ function getTerritoireColor(d)
 			return "#5f72ca";
 		case "PNR":
 			return "#4ea547";
+		case "futurPNR":
+			return "#4ea547";
 		case "Pays":
 			return "#4ea547";
 		case "LEADER":
@@ -175,6 +177,8 @@ function getTerritoireWeight(d)
 			return 1;
 		case "PNR":
 			return 1;
+		case "futurPNR":
+			return 1;
 		case "Pays":
 			return 1;
 		case "LEADER":
@@ -198,6 +202,8 @@ function getTerritoirePane(d)
 			return "615";
 		case "PNR":
 			return "615";
+		case "futurPNR":
+			return "620";
 		case "Pays":
 			return "615";
 		case "LEADER":
@@ -220,6 +226,8 @@ function getTerritoireOpacity(d)
 		case "EPCI":
 			return 0;
 		case "PNR":
+			return 0;
+		case "futurPNR":
 			return 0;
 		case "Pays":
 			return 0;
