@@ -91,6 +91,10 @@ Carte présentant les expérimentations menées dans la Haute-Lande par les cher
 
 **Lien vers la carte de test :** https://thomacarto.github.io/Marginov/cartes/Creuse_map_territoire.html
 
+## Prototype de cartes pour le territoire GIP GPV Rive droite de Bordeaux Métropole.
+
+**Lien vers la carte :** https://thomacarto.github.io/Marginov/cartes/GPVrivedroite_map_territoires.html
+
 
 
 
