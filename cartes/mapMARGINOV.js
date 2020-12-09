@@ -158,11 +158,11 @@ function getTerritoireColor(d)
 		case "LEADER":
 			return "#f0c53e";
 		case "ZONE":
-			return " #2874a6 ";
+			return " #f0c53e ";
 		case "CD":
 			return "#79c6c0";
 		case "InfraEPCI":
-			return "#2874a6";
+			return "#5f72ca";
 			
 		default:
 			return "red";
@@ -213,7 +213,7 @@ function getTerritoirePane(d)
 		case "LEADER":
 			return "610";
 		case "ZONE":
-			return "620";
+			return "630";
 		case "CD":
 			return "610";
 		case "InfraEPCI":
