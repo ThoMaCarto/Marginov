@@ -161,6 +161,8 @@ function getTerritoireColor(d)
 			return " #2874a6 ";
 		case "CD":
 			return "#79c6c0";
+		case "InfraEPCI":
+			return "#2874a6";
 			
 		default:
 			return "red";
@@ -187,6 +189,8 @@ function getTerritoireWeight(d)
 			return 3;
 		case "CD":
 			return 1;
+		case "InfraEPCI":
+			return 1;
 		default:
 			return 6;
 	}
@@ -212,6 +216,8 @@ function getTerritoirePane(d)
 			return "620";
 		case "CD":
 			return "610";
+		case "InfraEPCI":
+			return "620";
 		default:
 			return "630";
 	}
@@ -234,6 +240,8 @@ function getTerritoireOpacity(d)
 		case "LEADER":
 			return 0;
 		case "ZONE":
+			return 0;
+		case "InfraEPCI":
 			return 0;
 		default:
 			return 0;
