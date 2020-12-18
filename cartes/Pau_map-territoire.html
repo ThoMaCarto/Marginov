@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Atlas Innovations Territoires Marges Nouvelle-Aquitaine</title>
+	<meta name="author" content="Thomas Maillard">
+	
+	
+	<!-- feuille de style personnalisée-->
+	<link rel="stylesheet" href="style.css"/>
+	
+	<!-- chargement des ressources extenres :librairies externes de javascript et feuilles de styles-->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" />
+	
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+      
+   <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+   crossorigin=""></script>
+   
+   <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster-src.js"></script>
+   <link rel="stylesheet" type="text/css"  href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
+   <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
+   
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js"></script>
+   <link rel="stylesheet" type="text/css"  href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"/>
+
+   
+    <script src="https://unpkg.com/leaflet.pattern@0.1.0/dist/leaflet.pattern.js"></script>
+	
+	<!-- chargement des bases de données géographiques en geojson-->
+	<script src="territoires.json"></script>
+	<script src="initiatives.json"></script>
+	<script src="lieux_cle.json"></script>
+	
+   
+   
+   
+</head>
+
+
+<body>
+
+<section class="content">
+	
+	<div id="map" class="map"></div>
+	<!--l'affichage des div suivant (panneaux latéreaux de légende dépend des paramètres du script javascript cf. footer>script -->
+	<div id="panneau" class="panneau" style="display: none;">
+		<div id="actors" style="display: none;"></div>
+		<div id ="initiativeLegend" style="display: none;"></div>
+	</div>
+	
+	
+	
+</section>
+
+<footer>
+
+<script>
+/*Paramètres de la carte*/
+/*Saisir ici tous les paramètres de la carte en respectant bien la syntaxe*/
+var minZoom = 8;//zoom minimum par défaut mettre 5
+var maxZoom = 18; //zoom maximum par défaut mettre 18
+var zoomMap = 8; /* échelle régionale = 8, échelle local = 16*/
+var minimizeMinimap = false; //Affichage ou non de la minicarte de situation en bas à droite de la carte
+var centerMap = "auto";/*[44.4122, -0.5603];coordonnées du centre de la carte (ex. Moustey = [44.35622,-0.76433]) si  "auto" le centre de la carte sera le centroide de la couche territoires*/
+var filtreMap = ["Pau"]; /*filtrage des éléments affiché: tous les élements ou seulement un territoire laboratoire: ex["Medoc","Creuse","Haute-Lande"]*/
+var typeFond = "gris";/* apparence du fond de carte : "gris" ou "couleurs"*/
+var afficherTerritoires = true; /*afficher les périmètres administratifs ou non*/
+var afficherLieuxcles = true; /* afficher les lieux clés*/
+var afficherInitiatives = false; /*afficher ou non les puces des initiatives*/
+var afficherPanneau = false; /*afficher le panneau d'information latéral ou non. Si false, alors les deux paramètres suivants seront invisibles.*/
+var afficherFiltresActeurs = false; /*afficher le panneau permettant de filtrer les initiatives par types d'acteurs*/
+var AfficherLegendeInitiatives = false; /*afficher les panneau de légende des types d'initiatives*/
+
+
+
+</script>
+
+<script src="mapMARGINOV.js"></script>
+	
+
+</footer>
+
+</body>
