@@ -417,8 +417,26 @@ map.on('overlayremove', displayInfo);
 //créer un tableau contenant tous les types d'acteurs recensé typAct3
 var typAct2 = [];
 
+var initSelect=[];
 
-for (var i = 0; i < initiatives.features.length; i++)
+for (var i = 0; i < initiatives.features.length; i++){
+	if (filtreMap.includes(initiatives.features[i].properties.labo)){
+			initSelect.push(initiatives.features[i].properties.actors)
+	}
+}
+
+for (var j=0;j<initSelect.length;j++){
+	for(var e=0;e<initSelect[j].length;e++){
+		var iterator = initSelect[j].values();
+		for (let elements of iterator) { 
+			typAct2.push(elements);
+		} 
+		
+	}
+	
+}
+
+/*for (var i = 0; i < initiatives.features.length; i++)
 {
 	for (var e = 0; e < initiatives.features[i].properties.actors.length; e++)
 	{
@@ -434,7 +452,7 @@ for (var i = 0; i < initiatives.features.length; i++)
 		
 		typAct2.push(actorUnique);
 	}
-}
+}*/
 var typAct3 = removeDuplicates(typAct2);
 
 function removeDuplicates(d)

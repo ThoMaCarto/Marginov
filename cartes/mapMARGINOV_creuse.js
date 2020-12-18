@@ -538,22 +538,23 @@ map.on('overlayremove', displayHRLegend);
 //créer un tableau contenant tous les types d'acteurs recensé typAct3
 var typAct2 = [];
 
-for (var i = 0; i < initiatives.features.length; i++)
-{
-	for (var e = 0; e < initiatives.features[i].properties.actors.length; e++)
-	{
-		if (filtreMap.includes(initiatives.features[i].properties.labo)){
-		var actorUnique = getCat(typAct2, initiatives.features[i].properties.actors[e]);
-		if (actorUnique === undefined)
-			{
-				actorUnique = [initiatives.features[i].properties.actors[e]]
-			}
-		}
-		
-		
-		
-		typAct2.push(actorUnique);
+var initSelect=[];
+
+for (var i = 0; i < initiatives.features.length; i++){
+	if (filtreMap.includes(initiatives.features[i].properties.labo)){
+			initSelect.push(initiatives.features[i].properties.actors)
 	}
+}
+
+for (var j=0;j<initSelect.length;j++){
+	for(var e=0;e<initSelect[j].length;e++){
+		var iterator = initSelect[j].values();
+		for (let elements of iterator) { 
+			typAct2.push(elements);
+		} 
+		
+	}
+	
 }
 var typAct3 = removeDuplicates(typAct2);
 
