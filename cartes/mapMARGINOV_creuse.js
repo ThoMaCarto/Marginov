@@ -544,12 +544,13 @@ for (var i = 0; i < initiatives.features.length; i++)
 	{
 		if (filtreMap.includes(initiatives.features[i].properties.labo)){
 		var actorUnique = getCat(typAct2, initiatives.features[i].properties.actors[e]);
-		}
-		
-			if (actorUnique === undefined)
+		if (actorUnique === undefined)
 			{
 				actorUnique = [initiatives.features[i].properties.actors[e]]
 			}
+		}
+		
+		
 		
 		typAct2.push(actorUnique);
 	}
