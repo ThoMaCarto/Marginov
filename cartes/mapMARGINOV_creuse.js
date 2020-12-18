@@ -557,6 +557,7 @@ for (var j=0;j<initSelect.length;j++){
 	
 }
 var typAct3 = removeDuplicates(typAct2);
+typAct3.sort();
 
 function removeDuplicates(d)
 {

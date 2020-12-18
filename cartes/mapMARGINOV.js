@@ -430,30 +430,16 @@ for (var j=0;j<initSelect.length;j++){
 		var iterator = initSelect[j].values();
 		for (let elements of iterator) { 
 			typAct2.push(elements);
+			
 		} 
 		
 	}
 	
 }
 
-/*for (var i = 0; i < initiatives.features.length; i++)
-{
-	for (var e = 0; e < initiatives.features[i].properties.actors.length; e++)
-	{
-		if (filtreMap.includes(initiatives.features[i].properties.labo)){
-		var actorUnique = getCat(typAct2, initiatives.features[i].properties.actors[e]);
-		if (actorUnique === undefined)
-			{
-				actorUnique = [initiatives.features[i].properties.actors[e]]
-			}
-		}
-		
-		
-		
-		typAct2.push(actorUnique);
-	}
-}*/
+
 var typAct3 = removeDuplicates(typAct2);
+typAct3.sort();
 
 function removeDuplicates(d)
 {
