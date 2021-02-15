@@ -346,7 +346,7 @@ var couchelieuxcles = L.geoJson(lieuxCles,
 				pane: "630"
 			});
 			//caractéristiques des popup
-			marker.bindPopup('<h4>'+ feature.properties.type +' : ' + feature.properties.nom_site + '</h4><p></p><b>Adresse </b>: '+feature.properties.adresse +'<br/>'+feature.properties.commune+' ('+feature.properties.cp+')<p><a href="' + feature.properties.web + '" target="' + feature.properties.target +'" >'+feature.properties.web+'</a></p>');
+			marker.bindPopup('<h4>'+ feature.properties.type +' : ' + feature.properties.nom_site + '</h4><p></p><b>Adresse </b>: '+feature.properties.adresse +'<br/>'+feature.properties.commune+' ('+feature.properties.cp+')<p><a href="' + feature.properties.web + '" target="_blank" >'+feature.properties.web+'</a></p>');
 			//Affichage des marqueurs
 			return marker;
 		},
@@ -625,7 +625,7 @@ function displayLayersInit()
 				pane: "630"
 			});
 			//caractéristiques des popup
-			marker.bindPopup('<h4>' + feature.properties.name + '</h4><img src="' + feature.properties.illustre + '" width="90%"><p><b> Type d\'innovation : </b>' + feature.properties.cat + '</p><p><b>Acteurs :</b>' + feature.properties.actors + '</p><p><a href="' + feature.properties.link + '" target="_parent" >+ d\'info...</a></p>');
+			marker.bindPopup('<h4>' + feature.properties.name + '</h4><img src="' + feature.properties.illustre + '" width="90%"><p><b> Type d\'innovation : </b>' + feature.properties.cat + '</p><p><b>Acteurs :</b>' + feature.properties.actors + '</p><p><a href="' + feature.properties.link + '" target="'+feature.properties.target+'" >+ d\'info...</a></p>');
 			//Affichage des marqueurs
 			return marker;
 		},
