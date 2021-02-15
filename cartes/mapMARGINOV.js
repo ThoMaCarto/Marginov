@@ -346,7 +346,7 @@ var couchelieuxcles = L.geoJson(lieuxCles,
 				pane: "630"
 			});
 			//caractéristiques des popup
-			marker.bindPopup('<h4>'+ feature.properties.type +' : ' + feature.properties.nom_site + '</h4><p></p><b>Adresse </b>: '+feature.properties.adresse +'<br/>'+feature.properties.commune+' ('+feature.properties.cp+')<p><a href="' + feature.properties.web + '" target="_parent" >'+feature.properties.web+'</a></p>');
+			marker.bindPopup('<h4>'+ feature.properties.type +' : ' + feature.properties.nom_site + '</h4><p></p><b>Adresse </b>: '+feature.properties.adresse +'<br/>'+feature.properties.commune+' ('+feature.properties.cp+')<p><a href="' + feature.properties.web + '" target=" ' + feature.properties.target +'" >'+feature.properties.web+'</a></p>');
 			//Affichage des marqueurs
 			return marker;
 		},
