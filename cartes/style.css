@@ -327,6 +327,20 @@ button:hover{
     color: #996d00;
 }
 
+.CEM > .map-label-content{
+  border-color: #4ea547;
+  color: #4ea547;
+}
+
+.CEM > .map-label-arrow{
+  border-top-color: #4ea547;
+  /*color: #4ea547;*/
+  }
+  
+ .CEM-color-legend{
+    color: #4ea547;
+}
+
 .alur > .map-label-content{
   border-color: #4ea547;
   color: #4ea547;
