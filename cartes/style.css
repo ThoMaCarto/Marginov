@@ -285,18 +285,32 @@ button:hover{
 
 /*class en fonction de typecss pour les lieux clés*/
 /*pour le conseil dep*/
-.LIP > .map-label-content{
+.CAUE > .map-label-content{
   border-color: #ee600a;
   color: #ee600a;
 }
-.LIP > .map-label-arrow{
+.CAUE > .map-label-arrow{
   border-top-color: #ee600a;
   /*color: #ee600a;*/
   }
 
 /*pour le pays de combraille en marche*/ 
-.LIP-color-legend{
+.CAUE-color-legend{
     color: #ee600a;
+}
+
+.LIP > .map-label-content{
+  border-color: #996d00;
+  color: #996d00;
+}
+.LIP > .map-label-arrow{
+  border-top-color: #996d00;
+  /*color: #ee600a;*/
+  }
+
+/*pour le pays de combraille en marche*/ 
+.LIP-color-legend{
+    color: #996d00;
 }
 
 .L > .map-label-content,.DPP > .map-label-content{
