@@ -299,17 +299,17 @@ button:hover{
     color: #ee600a;
 }
 
-.LIP > .map-label-content{
+.CD > .map-label-content{
   border-color: #996d00;
   color: #996d00;
 }
-.LIP > .map-label-arrow{
+.CD > .map-label-arrow{
   border-top-color: #996d00;
   /*color: #ee600a;*/
   }
 
 /*pour le pays de combraille en marche*/ 
-.LIP-color-legend{
+.CD-color-legend{
     color: #996d00;
 }
 
