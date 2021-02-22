@@ -371,7 +371,7 @@ var couchelieuxcles = L.geoJson(lieuxCles,
 				pane: "635"
 			});
 			//caractéristiques des popup
-			marker.bindPopup('<h4>'+ feature.properties.type +' : <br/>' + feature.properties.nom_site + '</h4><p></p><p><b>Date de réalisation</b>: '+testNonNull (feature.properties.date)+'</p><b>Adresse </b>: '+testNonNull (feature.properties.adresse) +'<br/>'+testNonNull (feature.properties.commune)+' ('+testNonNull (feature.properties.cp)+')<p><a href="' + testNonNull (feature.properties.web) + '"  target="_blank" >'+testNonNull (feature.properties.web)+'</a></p>');
+			marker.bindPopup('<h4>'+ feature.properties.type +' : <br/>' + feature.properties.nom_site + '</h4><p></p><p><b>Date de réalisation</b>: '+testNonNull (feature.properties.date)+'</p><b>Adresse </b>: '+testNonNull (feature.properties.adresse) +'<br/>'+testNonNull (feature.properties.commune)+' ('+testNonNull (feature.properties.cp)+')<p><a href="' + testNonNull (feature.properties.web) + '"  target="_blank" >'+testNonNull (feature.properties.web)+'</a></p><p> <strong>Informations :</strong> '+testNonNull (feature.properties.description)+'</p>');
 			//Affichage des marqueurs
 			return marker;
 		},
