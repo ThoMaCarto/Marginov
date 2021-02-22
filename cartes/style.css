@@ -354,7 +354,19 @@ button:hover{
  .alur-color-legend{
     color: #4ea547;
 }
+.UR > .map-label-content{
+  border-color: #ee600a;
+  color: #ee600a;
+}
+.UR > .map-label-arrow{
+  border-top-color: #ee600a;
+  /*color: #ee600a;*/
+  }
 
+/*pour le pays de combraille en marche*/ 
+.UR-color-legend{
+    color: #ee600a;
+}
 
 /*pour les lieux hybrides*/
 .TL > .map-label-content{
