@@ -22,6 +22,6 @@ var initiatives = {
 
 { "type": "Feature", "properties": { "name": "Atelier pédagogique Paysages-Acteurs-Territoire en Haute Gironde", "cat": "Atelier Pédagogique", "typecss": "atelier-pedago", "labo": "Haute Gironde","label":"[M]","rang":"iconerang1", "actors": ["ENSAP-Bx","Communauté de Communes","CREN","CNRS"], "illustre": "", "link": "https://www.marginov.cnrs.fr/ateliers-pedagogiques-paysages-acteurs-territoire-en-haute-gironde/", "target":"_parent", }, "geometry": { "type": "Point", "coordinates": [ -0.6351470,45.268604] } },
 
-{ "type": "Feature", "properties": { "name": "Atlas sensibles de Pau", "cat": "Ressources du territoire", "typecss": "ressource", "labo": "Pau","label":"[M]","rang":"iconerang1", "actors": ["ENSAP-Bx","Communauté de Communes","Commune","CNRS"], "illustre": "", "link": "https://www.marginov.cnrs.fr/les-atlas-de-pau/", "target":"_parent", }, "geometry": { "type": "Point", "coordinates": [ -0.372805595,43.295511742] } },
+{ "type": "Feature", "properties": { "name": "Atlas sensibles de Pau", "cat": "Ressources du territoire", "typecss": "ressource", "labo": "Pau","label":"[M]","rang":"iconerang1", "actors": ["ENSAP-Bx","Communauté de Communes","Commune","CNRS"], "illustre": "https://www.marginov.cnrs.fr/wp-content/uploads/2020/12/atlas_sensible_pau.png", "link": "https://www.marginov.cnrs.fr/les-atlas-de-pau/", "target":"_parent", }, "geometry": { "type": "Point", "coordinates": [ -0.372805595,43.295511742] } },
 ]
 }
