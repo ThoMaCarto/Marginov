@@ -161,6 +161,8 @@ function getTerritoireColor(d)
 			return " #f0c53e ";
 		case "CD":
 			return "#79c6c0";
+		case "CR":
+			return "#79c6c0";
 		case "InfraEPCI":
 			return "#5f72ca";
 			
@@ -189,6 +191,8 @@ function getTerritoireWeight(d)
 			return 3;
 		case "CD":
 			return 1;
+		case "CR":
+			return 1;
 		case "InfraEPCI":
 			return 1;
 		default:
@@ -215,6 +219,8 @@ function getTerritoirePane(d)
 		case "ZONE":
 			return "630";
 		case "CD":
+			return "610";
+		case "CR":
 			return "610";
 		case "InfraEPCI":
 			return "620";
