@@ -57,7 +57,8 @@ var osmfr = L.tileLayer('http://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png'
 
 // Ajouter la couche "osmfr" à la carte		
 // création d'une couche "bwLayer" un fond de carte en grisaille
-var bwLayer = L.tileLayer('https://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png',
+var bwLayer = L.tileLayer('http://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png',
+//'https://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png',
 {
 	attribution: '<b>Fond de carte</b> © <a href="http://osm.org/copyright">OpenStreetMap</a><br>' + attribMARGINOV,
 	opacity: 0.8,
