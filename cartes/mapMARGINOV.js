@@ -98,9 +98,9 @@ function filterLabo(feature) {
 //sélectionner le type de fond de carte
 function designFond (d){
 	switch (d){
-		case "gris": return bwLayer;
+		case "gris": return osmfr;
 		case "couleurs": return osmfr;
-		default: return bwLayer;
+		default: return osmfr;
 	}
 }
 map.addLayer(designFond (typeFond));
@@ -710,7 +710,7 @@ function updateInitiativeLayer()
 /////Controleur des couches
 var fond = {
 	"Fond de carte en couleurs": osmfr,
-	"Fond de carte en grisaille": bwLayer
+	//"Fond de carte en grisaille": bwLayer
 };
 var overlays = {
 	"Périmètres administratifs": coucheTerritoires,
