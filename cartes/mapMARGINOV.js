@@ -46,7 +46,7 @@ var attribMARGINOV = '<b>Données</b> © <a href="http://www.marginov.cnrs.fr/?p
 var osmfr = L.tileLayer('http://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png',
 {
 	attribution: '<b>Fond de carte</b> © <a href="http://osm.org/copyright">OpenStreetMap</a>/ODbL - rendu <a href="http://openstreetmap.fr">OSM France</a><br>' + attribMARGINOV,
-	opacity: 0.4,
+	opacity: 0.5,
 	minZoom: minZoom,
 	maxZoom: maxZoom,
 	bounds: [
@@ -55,16 +55,7 @@ var osmfr = L.tileLayer('http://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png'
 	],
 });
 
-// Ajouter la couche "osmfr" à la carte		
-// création d'une couche "bwLayer" un fond de carte en grisaille
-var bwLayer = L.tileLayer('http://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png',
-//'https://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png',
-{
-	attribution: '<b>Fond de carte</b> © <a href="http://osm.org/copyright">OpenStreetMap</a><br>' + attribMARGINOV,
-	opacity: 0.4,
-	opacity: 0.8,
-	maxZoom: 19,
-});
+
 
 
 //échelle
