@@ -38,6 +38,8 @@
 	<script src="territoires.json"></script>
 	<script src="initiatives.json"></script>
 	<script src="lieux_cle.json"></script>
+	<script src="bv_hyperrural.json"></script>
+	
 	
    
    
@@ -83,7 +85,7 @@ var centerMap = [46.0263,2.0750];/*[44.4122, -0.5603];coordonnées du centre de 
 var filtreMap = ["Creuse"]; /*filtrage des éléments affiché: tous les élements ou seulement un territoire laboratoire: ex["Medoc","Creuse","Creuse2","Creuse3","Haute-Lande"]*/
 var typeFond = "gris";/* apparence du fond de carte : "gris" ou "couleurs"*/
 var afficherTerritoires = true; /*afficher les périmètres administratifs ou non*/
-var afficherLieuxcles = false; /* afficher les lieux clés*/
+var afficherLieuxcles = true; /* afficher les lieux clés*/
 var filtrelieuxcles = [] /*Filtre les lieux à afficher :"CEMleader", "CEMetudes", "CEMtravaux","TiersLieux","TELA","CD"*/
 var afficherInitiatives = true; /*afficher ou non les puces des initiatives*/
 var afficherHyperrural = true; /*afficher la couche des bassins de vie hyper-ruraux*/
@@ -98,8 +100,8 @@ var afficherClustersLieuxCles = false; /* afficher les POI sous forme d'agglomé
 </script>
 
 <script src="mapMARGINOV_creuse.js"></script>
-	
-<script src="./FileSaver.min.js"></script>
+ 
+ <script src="./FileSaver.min.js"></script>
  <script>
   function saveToFile(content, filename) {
       var file = filename + '.geojson';
