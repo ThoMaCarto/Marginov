@@ -47,7 +47,7 @@ var initiatives = {
 
 
 
-
+{"type": "Feature","properties": {"name":"La sagesse du jardinier","cat":"03 Pérenniser démarches et actions impliqués","typecss":"lieu-echange","labo": "GPV rive droite","label":"[M]","rang":"iconerang2","actors":["Commune","ENSAP-Bx","Habitants","Association(s)"],"illustre":"https://www.marginov.cnrs.fr/wp-content/uploads/2022/06/img_7501.jpeg","link":"https://www.marginov.cnrs.fr/la-sagesse-du-jardinier/", "target":"_parent",},      "geometry": {"type": "Point","coordinates": [-0.5249190330505371,44.86142054950077]}},
 { "type": "Feature", "properties": { "name": "Retour d'expérience PNR Médoc", "cat": "03 Pérenniser démarches et actions impliqués", "typecss": "lieu-echange", "labo": "Médoc","label":"[M]","rang":"iconerang2", "actors":["Propriétaires fonciers","Agriculteurs","PNR","Commune"],"illustre": "https://www.marginov.cnrs.fr/wp-content/uploads/2020/10/beychevelle00.jpg", "link": "https://www.marginov.cnrs.fr/retour-dexperience-pnr-medoc/" , "target":"_parent",}, "geometry": { "type": "Point", "coordinates": [ -0.94482421875,45.30387083299528] } },
 
 {"type": "Feature","properties": {"name": "Atelier des Landes - Scierie de Moustey","cat": "03 Pérenniser démarches et actions impliqués","typecss":"lieu-echange","labo": "Haute-Lande","label":"[M]","rang":"iconerang2","actors": ["PNR","Commune","Communauté de Communes","ENSAP-Bx","LEADER"],"illustre":"http://www.marginov.cnrs.fr/wp-content/uploads/2020/02/DSCF6024.jpg","link":"https://www.marginov.cnrs.fr/atelier-des-landes/", "target":"_parent",},"geometry": {"type": "Point","coordinates": [-0.7643330097198486,44.356221776011104]}},
